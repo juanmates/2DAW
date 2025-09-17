@@ -1,0 +1,42 @@
+h1, footer {
+    text-align: center;
+}
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+nav {
+    text-align: right;
+}
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.uno {
+    background-color: green;
+    color: white;
+    height: 200px;
+    width: 850px;
+    text-align: center;
+    
+}
+.dos {
+    
+    background-color: blue;
+    color: white;
+    height: 200px;
+    width: 850px;
+    text-align: center;
+}
+.unouno {
+    padding-top: 70px;
+}
+.dosdos {
+    padding-top: 70px;  
+}
