@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var fecha = new Date();
+
+        var fecha1 = new Date(2002, 4, 2);
+
+        document.writeln(fecha.toString() + "<br>");
+        document.writeln(fecha1.toString() + "<br>");
+
+        document.writeln(fecha.getFullYear() + "<br>");
+        document.writeln(fecha1.getFullYear() + "<br>");
+
+        fecha.setFullYear(2024)
+        fecha1.setFullYear(2001)
+
+        var fecha2 = new Date();
+
+        document.writeln(fecha2.toLocaleDateString() + "<br>");
+
+        var dia = fecha2.getDate();
+        var mes = fecha2.getMonth();
+        var anyo = fecha2.getFullYear();
+
+        document.writeln(`La fecha de hoy es ${dia}/${mes}/${anyo}`);
+        
+
+        
+
+    </script>
+
+</body>
+</html>

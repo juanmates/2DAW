@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var topping = prompt("¿Que toping quieres?");
+        let heladoSIN = 1.90;
+
+        switch(topping) {
+            
+            case "oreo":
+                document.writeln(`El topping de oreo cuesta ${heladoSIN + 1}€.`);
+                break;
+            case "kitkat":
+                document.writeln(`El topping de kitkat cuesta ${heladoSIN + 1.50}€.`);
+                break;
+            case "brownie":
+                document.writeln(`El topping de brownie cuesta ${heladoSIN + 0.75}€.`);
+                break;
+            case "lacasitos":
+                document.writeln(`El topping de lacasitos cuesta ${heladoSIN + 0.95}€.`)
+                break;
+
+            default:
+                document.writeln(`No tenemos ese toping, lo sentimos, el helado sin topping
+                vale ${heladoSIN}€.`);
+        }
+
+    </script>
+
+</body>
+</html>

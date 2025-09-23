@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var dia = prompt("Dime el dia de tu cumpleaños");
+        var mes = prompt("Dime el mes de tu cumpleaños");
+
+        var fecha = new Date();
+
+        fecha.setDate(dia);
+        fecha.setMonth(mes-1);
+
+
+        while(fecha.getFullYear()<=2100) {
+            if(fecha.getDay()==0){
+                document.writeln(fecha.getFullYear() +  "<br>");
+            }
+            fecha.setFullYear(fecha.getFullYear()+1);
+        }
+
+
+    </script>
+
+</body>
+</html>

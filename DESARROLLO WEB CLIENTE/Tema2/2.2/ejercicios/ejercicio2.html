@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var bucle = false;
+
+        do {
+
+            var numero = prompt("Dame un número entre 0 y 23");
+
+            if(numero<0 || numero > 23){
+                bucle = true;
+            } else {
+                if(numero >= 6 && numero <= 11){
+                    document.writeln("Buenos días");
+                } else if (numero >= 12 && numero <= 20){
+                    document.writeln("Buenas tardes");
+                }
+                else {
+                    document.writeln("Buenas noches");
+                }
+            }
+
+
+        }while(bucle);
+
+
+
+    </script>
+
+
+</body>
+</html>
