@@ -8,15 +8,25 @@ import com.ejercicios.modelo.Cliente;
 public interface ClienteService {
 	
 	List<Cliente> getClientes();
-	Optional<Cliente> getCliente(int id);
+	
+	Optional<Cliente> getCliente(Integer id);
+	
 	void insertaCliente(Cliente cliente);
-	void deleteCliente(int id);
-	void actualizarCliente(Cliente cliente);
+	
+	void deleteCliente(Integer id);
+	
+	Cliente actualizarCliente(Cliente clienteActualizado);
+	
 	List<Cliente> getClientesNombre(String nombre);
+	
 	List<Cliente> getClienteNombreyApellidos(String nombre, String apellidos);
+	
 	List<Cliente> getClientesOrdenadosApellidos();
-	List<Cliente> getNumeroCliente(String nombre);
+	
+	long getNumeroCliente(String nombre);
+	
 	List<Cliente> getClientesPrefijoSufijo(String cad1, String cad2);
+	
 	
 	
 

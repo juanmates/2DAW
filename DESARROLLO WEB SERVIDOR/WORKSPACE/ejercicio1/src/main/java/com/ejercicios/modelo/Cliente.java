@@ -29,8 +29,10 @@ public class Cliente {
 		super();
 	}
 	
-	public Cliente(int id, String nombre, String apellidos) {
+	public Cliente(String nombre, String apellidos) {
 		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
 	}
 
 	
@@ -57,6 +59,11 @@ public class Cliente {
 
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + "]";
 	}
 	
 
