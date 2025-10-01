@@ -9,7 +9,24 @@
     
     <script>
 
+        let nombreCompleto = prompt("Indica tu nombre completo");
+        let nombreSplit = nombreCompleto.split(" ");
+        let nombreSinEspacios = (nombreSplit[0] + nombreSplit[1] + nombreSplit[2]).trim();
+        document.write(`Cantidad de letras ${nombreSinEspacios.length}`);
         
+        document.write('<br/>')
+ 
+        document.write(`Nombre: ${nombreSplit[0]} <br/> Primer apellido: ${nombreSplit[1]} <br/> Segundo apellido: ${nombreSplit[2]}`)
+ 
+        document.write('<br/>')
+ 
+        let nombreComp = nombreSplit[0].charAt(0) + nombreSplit[1] + nombreSplit[2].charAt(0)
+        document.write(`El nombre completo es ${nombreComp}`)
+ 
+        document.write('<br/>')
+ 
+        let nombreConTres = nombreSplit[0].substring(0, 3) + nombreSplit[1].substring(0, 3) + nombreSplit[2].substring(0, 3);
+        document.write(`El nombre con tres letras es ${nombreConTres}`)
 
     </script>
 
