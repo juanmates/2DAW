@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import com.ejercicios.modelo.Cliente;
@@ -63,7 +62,6 @@ public class ClienteServiceImpl implements ClienteService{
 		return repositorio.findByNombreContainingIgnoreCase(nombre);
 	}
 
-	@Query("SELECT c FROM Cliente c WHERE c.nombre = :nombre AND c.apellidos = :apellidos")
 	@Override
 	public List<Cliente> getClienteNombreyApellidos(String nombre, String apellidos) {
 		// TODO Auto-generated method stub

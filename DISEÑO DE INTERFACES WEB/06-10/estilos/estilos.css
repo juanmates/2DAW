@@ -1,0 +1,37 @@
+/*descargar, pegar en carpeta y seguir el ejemplo*/
+@font-face {
+    src: url('../fonts/sf-pro-text_regular.woff2') format('woff2');
+    font-family: 'tipoApple';
+}
+
+@font-face{
+    src: url('../fonts/NotoSansLinearB-Regular.ttf') format('ttf'), 
+         url('../fonts/NotoSansLinearB-Regular.woff') format('woff');
+    font-family: 'tiporara';
+}
+
+@font-face {
+    font-family: 'tipohaunted';
+    src: url('../fonts/HauntedHillRegular-Regular.otf') format('otf'),
+         url('../fonts/HauntedHillRegular-Regular.ttf') format('ttf'),
+         url('../fonts/HauntedHillRegular-Regular.woff') format('woff'),
+         url('../fonts/HauntedHillRegular-Regular.woff2') format('woff2');
+}
+
+body{
+    font-family: 'tipoApple';
+}
+
+ul li{
+    font-family: 'tiporara';
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'tipohaunted';
+}
+
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
