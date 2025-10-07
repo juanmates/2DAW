@@ -1,15 +1,25 @@
 <script>
 
+    let numero = parseInt(prompt("Escriba un número"));
+
+    if(isNaN(numero) || numero<=0) {
+        alert("Escribe un número válido");
+    }
+
     let sumatorio = (x) => {
-        let suma = `El sumatorio de ${x} es :`;
-        for(i = x; i >= 1; i--) {
+        let suma = `El sumatorio de ${x} es : `;
+        let res = 0;
+        for(let i = x; i >= 1; i--) {
             if(i==1){
                 suma += "1 = ";
             }else {
-                suma += "i+";
+                suma += `${i}+`;
             }
-            
+            res = res + i;
         }
+        document.write(`${suma}${res}`);
     }
+
+    sumatorio(numero);
 
 </script>
