@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Variable para almacenar la referencia de la ventana emergente
+      var ventanaEmergente;
+
+      // Función que abre la ventana emergente y configura el temporizador
+      function abrirVentana() {
+        // Si la ventana ya está abierta, no abrir otra
+        if (ventanaEmergente && !ventanaEmergente.closed) {
+          alert("La ventana emergente ya está abierta.");
+          return;
+        }
+
+        // Tiempo inicial para la cuenta regresiva
+        let tiempoRestante = parseInt(document.getElementById("segundos").value);
+
+        // Validar si el valor ingresado es un número negativo
+        if(isNaN(tiempoRestante) || tiempoRestante <= 0) {
+          alert("Ingrese un número válido.");
+          return;
+        }
+
+        // Abrir la nueva ventana emergente
+        ventanaEmergente = window.open("", "ventana", "width=400,height=200");
+
+        // Escribir contenido en la ventana emergente
+        ventanaEmergente.document.write(
+          "<h2>Esta ventana se cerrará automáticamente en " + restar() + " segundos.</h2>"
+        );
+
+        // Mostrar el temporizador en la ventana principal
+        document.getElementById("temporizador").innerHTML =
+          "La ventana se cerrará en " + tiempoRestante + " segundos.";
+
+        let intervalo = setInterval(restar, 1000);
+
+        function restar() {
+          tiempoRestante--;
+          document.getElementById("temporizador").innerHTML =
+            "La ventana se cerrará en " + tiempoRestante + " segundos.";
+
+          // Si llega a 0, cerrar la ventana emergente y detener el intervalo
+          if (tiempoRestante === 0) {
+            ventanaEmergente.close();
+            clearInterval(intervalo);
+            document.getElementById("temporizador").innerHTML =
+              "La ventana se ha cerrado.";
+          }
+        }
+
+        // Configurar un temporizador que actualiza cada segundo
+        /* Otra forma:
+        
+        let intervalo = setInterval(function () {
+          tiempoRestante--;
+          document.getElementById("temporizador").innerHTML =
+            "La ventana se cerrará en " + tiempoRestante + " segundos.";
+
+          // Si llega a 0, cerrar la ventana emergente y detener el intervalo
+          if (tiempoRestante === 0) {
+            ventanaEmergente.close();
+            clearInterval(intervalo);
+            document.getElementById("temporizador").innerHTML =
+              "La ventana se ha cerrado.";
+          }
+        }, 1000);*/
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Ventana Emergente con Temporizador Personalizado</h1>
+    <p>
+      Ingresa el número de segundos para que la ventana emergente se cierre automáticamente
+    </p>
+      <label>Número de segundos: </label>
+      <input type="text" id="segundos" min="1" placeholder="Escribe el tiempo en segundos">
+      <button onclick="abrirVentana()">Abrir Ventana Emergente</button>
+    <p id="resultado"></p>
+    <!-- Aquí se mostrará el temporizador -->
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<script>
+
+    let numero = 500;
+
+    let parImpar = (x) => {
+        if(x%2 == 0) {
+            document.writeln(`El número ${x} es IMPAR <br>`);
+        } else {
+            document.writeln(`El número ${x} es PAR <br>`);
+        }
+    }
+
+    do {
+        let numeroAletorio = Math.floor(Math.random()*(10000 - 1 + 1)) + 1;
+        parImpar(numeroAletorio);
+        numero--;
+    } while(numero > 0);
+
+
+
+
+</script>

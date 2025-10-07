@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let fechaNacimiento = prompt(
+        "Introduzca su fecha de nacimiento en formato dd/mm/yyyy"
+      );
+
+      const fechaActual = new Date();
+      const partesFechaNacimiento = fechaNacimiento.split("/");
+      const diaNacimiento = parseInt(partesFechaNacimiento[0]);
+      const mesNacimiento = parseInt(partesFechaNacimiento[1]) - 1; // Los meses en JavaScript van de 0 a 11
+      const anioNacimiento = parseInt(partesFechaNacimiento[2]);
+
+      let edad = fechaActual.getFullYear() - anioNacimiento;
+
+      // Ajustar la edad si el cumpleaños aún no ha pasado este año
+      if (
+        fechaActual.getMonth() < mesNacimiento ||
+        (fechaActual.getMonth() === mesNacimiento &&
+          fechaActual.getDate() < diaNacimiento)
+      ) {
+        edad--;
+      }
+
+      document.write(`<h1>Tienes ${edad} años`);
+    </script>
+  </head>
+  <body></body>
+</html>

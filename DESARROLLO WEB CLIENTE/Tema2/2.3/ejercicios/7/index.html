@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Obtener los dos últimos dígitos del año de un objeto de tipo Date
+
+      let fecha = new Date();
+      let dia = fecha.getFullYear().toString();
+
+      document.write(dia.substring(dia.length - 2));
+    </script>
+  </body>
+</html>

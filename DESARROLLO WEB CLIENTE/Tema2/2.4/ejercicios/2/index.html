@@ -1,0 +1,19 @@
+<script>
+
+    let x = parseInt(prompt("Indique un número mayor o igual a 0"));
+
+    if(isNaN(x) || x<=0) {
+        alert("Escribe un número válido");
+    }
+
+    let factorial = (x) => {
+        let numero = 1;
+        for(i = 1; i <= x; i++) {
+            numero = numero * i;
+        }
+        console.log(numero);
+    };
+
+    factorial(x);
+
+</script>

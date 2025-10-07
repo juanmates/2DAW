@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Obtener una representación textual con el nombre completo del día de la semana.
+
+      const fecha = new Date();
+      const diaSemana = fecha.getDay(); // 0 es domingo, 6 es sábado
+
+      const diasSemana = [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+      ];
+
+      const nombreDia = diasSemana[diaSemana];
+      document.write(`Hoy es ${nombreDia}`);
+    </script>
+  </body>
+</html>

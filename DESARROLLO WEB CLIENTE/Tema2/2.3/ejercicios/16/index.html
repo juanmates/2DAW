@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="formularioPrincipal">
+      <p>
+        <input
+          type="button"
+          id="crear"
+          value="Crear Nueva Ventana"
+          onclick="seg = window.open('segunda.html','segunda','width=300,height=400,top=400,left=400');"
+        />
+
+        <input
+          type="button"
+          id="mover1"
+          value="Mover pixeles 200 d, 100 a"
+          onclick="seg.moveBy(200,100); seg.focus()"
+        />
+
+        <input
+          type="button"
+          id="mover2"
+          value="Mover a la posicion 500x200"
+          onclick="seg.moveTo(500,200); seg.focus()"
+        />
+
+        <input
+          type="button"
+          id="mover3"
+          value="Aumentar en 100x100"
+          onclick="seg.resizeBy(100,100); seg.focus()"
+        />
+        <input
+          type="button"
+          id="mover4"
+          value="Cambiar a 100x150"
+          onclick="seg.resizeTo(100,150); seg.focus()"
+        />
+      </p>
+    </form>
+  </body>
+</html>
