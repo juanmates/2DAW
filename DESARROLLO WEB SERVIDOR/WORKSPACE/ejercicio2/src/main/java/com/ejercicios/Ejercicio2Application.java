@@ -17,13 +17,13 @@ public class Ejercicio2Application  implements CommandLineRunner{
 
     private final ProductoServiceImpl productoServiceImpl;
 
-    private final ProductoRepository croductoRepository;
+    private final ProductoRepository productoRepository;
 	
 	@Autowired
 	ProductoService servicio;
 
-    Ejercicio2Application(ProductoRepository croductoRepository, ProductoServiceImpl productoServiceImpl) {
-        this.croductoRepository = croductoRepository;
+    Ejercicio2Application(ProductoRepository productoRepository, ProductoServiceImpl productoServiceImpl) {
+        this.productoRepository = productoRepository;
         this.productoServiceImpl = productoServiceImpl;
     }
 
@@ -94,24 +94,7 @@ public class Ejercicio2Application  implements CommandLineRunner{
 			System.out.println(p);
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
 }
