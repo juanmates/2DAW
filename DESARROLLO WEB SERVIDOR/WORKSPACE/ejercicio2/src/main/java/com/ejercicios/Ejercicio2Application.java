@@ -52,10 +52,10 @@ public class Ejercicio2Application  implements CommandLineRunner{
 		lista.add(p2);
 		lista.add(p1);
 		
-		System.out.println("Ya esta preparada la lista");
 		
 		System.out.println("GUARDAMOS LA LISTA EN LA BASE DE DATOS");
 		servicio.insertarProductos(lista);
+
 		System.out.println("PRODUCTOS  INSERTADOS\n");
 		
 		System.out.println("\n PRODUCTOS QUE EMPIECEN POR 'L' Y SU PRECIO SEA INFERIOR A 5€");
@@ -77,17 +77,18 @@ public class Ejercicio2Application  implements CommandLineRunner{
 		List<Producto> listaInsertar = new ArrayList<>();
 		
 		Producto p7 = new Producto("Librito", 13f);
-		Producto p8 = new Producto("Bolígrafo", 1.33f);
+		Producto p8 = new Producto("Bolígrafo", 1.7f);
 		Producto p9 = new Producto("Maleta", 1.33f);
-		p7.setId(0);
+		p7.setId(1);
 		
 		listaInsertar.add(p9);
 		listaInsertar.add(p8);
 		listaInsertar.add(p7);
 		
-		System.out.println("GUARDAMOS LA SEGUNDA LISTA EN LA BASE DE DATOS");
-		servicio.insertarProductos(lista);
+		servicio.insertarProductos(listaInsertar);
+		
 		System.out.println("PRODUCTOS  INSERTADOS\n");
+		
 		
 		System.out.println("\n PRODUCTOS CUYO PRECIO ESTA ENTRE 0 Y 100 EUROS");
 		for(Producto p : servicio.getProductoRangoPrecio(0f, 100f)) {
