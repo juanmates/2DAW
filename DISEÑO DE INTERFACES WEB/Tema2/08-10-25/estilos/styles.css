@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+.contenedor {
+    border: 3px solid;
+    margin: 5%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: row;
+    
+}
+
+.item {
+    width: 150px;
+    border: 1px solid;
+    background-color: #eee;
+    height: 100px;
+}
