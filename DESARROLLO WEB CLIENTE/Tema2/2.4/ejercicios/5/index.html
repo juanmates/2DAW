@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <button onclick="funcionTabla()">Crear tabla con borde negro, 10 filas y 4 columnas</button>
+    <button onclick="funcionTabla(20, 10, 'black')">Crear tabla con borde negro, 20 filas y 10 columnas</button>
+    <button onclick="tablas(5, 4, 10, 'green')">Dibujar 10 tablas de 5 filas y 4 columnas</button>
+
+    <script>
+        let funcionTabla = (filas = 10, columnas = 4, color = "black") => {
+
+             let tabla = `<table style='border: 1px solid ${color};'>`;
+
+            for(let i = 1; i <= filas; i++) {
+                tabla += "<tr>";
+                    for(let x = 1; x <= columnas; x++) {
+                        tabla += `<td>Fila ${i} Columna ${x}</td>`;
+                    }
+                tabla += `</tr>`;
+            }
+            tabla += `</table>`;
+
+            document.body.innerHTML += tabla;
+
+        }
+
+//////////////////////////////////////////////////////////////////////
+
+        let tablas = (nFilas, nColumnas, nTablas, color) => {
+
+            for(let i = 1; i <= nTablas; i++) {
+                funcionTabla(nFilas, nColumnas, color);
+            };
+        };
+
+    </script>
+</body>
+</html>
