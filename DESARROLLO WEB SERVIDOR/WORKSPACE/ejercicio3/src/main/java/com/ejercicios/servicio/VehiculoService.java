@@ -1,18 +1,19 @@
 package com.ejercicios.servicio;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.ejercicios.modelo.Vehiculo;
 
 public interface VehiculoService {
 
-	void crearVehiculo(Vehiculo v);
+	Vehiculo crearVehiculo(Vehiculo v);
 	
-	Vehiculo getVehiculoPorId(int id);
+	Optional<Vehiculo> getVehiculoPorId(int id);
 	
 	List<Vehiculo> getVehiculos();
 	
-	void actualizarVehiculo(int id, Vehiculo v);
+	Vehiculo actualizarVehiculo(int id, Vehiculo v);
 	
 	void eliminarVehiculo(int id);
 	
