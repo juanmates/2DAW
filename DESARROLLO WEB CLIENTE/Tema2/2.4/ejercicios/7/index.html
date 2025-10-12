@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let funcionTabla = (x) => {
+
+             let tabla = '<ul type="number">';
+
+            for(let i = 1; i <= x; i++) {
+                tabla += `<li>Elemento ${i}</li>`;
+            }
+
+            tabla += '</ul>';
+
+            document.writeln(tabla);
+
+        }
+
+        var ventana = window.open('', 'secundaria', 'width=700px,height=300px;');
+
+        ventana.document.body.innerHTML = "<label for=''>Escriba un número del 1 al 20:  </label><input type='number' placeholder='Número del 1 al 20' id='num'> <button id='enviar'>Enviar</button>"
+        
+        document.getElementById("enviar").onclick() = function() {
+
+            let numero = document.getElementById("num").value;
+            window.opener.escribirLista(numero);
+            ventana.close();
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
