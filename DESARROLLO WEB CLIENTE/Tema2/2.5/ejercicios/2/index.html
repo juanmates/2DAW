@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var array = [];
+        var arrayFiltrado = [];
+
+        for(let i = 0; i < 3; i++){
+            var palabra = prompt("Introduzca una palabra");
+            if(palabra == null){
+                array[i] = "";    
+            }else {
+                array[i] = palabra;
+            }
+            
+        }
+        array.forEach((e) => {
+            if(e.startsWith("c") || e.startsWith("C")) {
+                arrayFiltrado.push(e);
+            }
+        })
+        console.log(array);
+        console.log(arrayFiltrado.join(", "));
+        document.writeln(array + "<br>");
+        document.writeln(arrayFiltrado.join(", "));
+
+        if(arrayFiltrado.length == 0){
+            document.writeln("No hay palabras que empiecen por C")
+        }
+
+    </script>
+
+
+</body>
+</html>

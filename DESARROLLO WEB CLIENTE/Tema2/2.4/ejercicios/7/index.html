@@ -14,13 +14,12 @@
              let tabla = '<ul type="number">';
 
             for(let i = 1; i <= x; i++) {
-                tabla += `<li>Elemento ${i}</li>`;
+                tabla += `<li>${i}</li>`;
             }
 
             tabla += '</ul>';
 
             document.writeln(tabla);
-
         }
 
         var ventana = window.open('', 'secundaria', 'width=700px,height=300px;');
@@ -33,8 +32,6 @@
             window.opener.escribirLista(numero);
             ventana.close();
         }
-
-
 
     </script>
     
