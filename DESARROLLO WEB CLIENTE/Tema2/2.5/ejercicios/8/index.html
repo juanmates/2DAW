@@ -9,12 +9,30 @@
 
     <script>
 
-        const numeros = [];
+        var separarParesImpares= (array) => {
+            
+            if(!Array.isArray(array)){
+                console.log("Error: El valor recibido no es un array.");
+                return;
+            }
+            if (arr.length === 0) {
+                console.log("Error: El array está vacío.");
+                return;
+            }
 
-        const pares = numeros.filter(numero => numero % 2 === 0);
-        const impares = numeros.filter(numero => numero % 2 !== 0);
+            if (!arr.every(num => typeof num === "number")) {
+                console.log("Error: El array debe contener solo números.");
+                return;
+            }
 
-        
+            const pares = array.filter(numero => numero % 2 === 0);
+            const impares = array.filter(numero => numero % 2 !== 0);
+
+            console.log("Números pares:", pares);
+            console.log("Números impares:", impares);
+        }
+
+        separarParesImpares([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
 
 
 
