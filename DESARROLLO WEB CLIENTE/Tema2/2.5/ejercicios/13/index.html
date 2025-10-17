@@ -1,0 +1,32 @@
+<script>
+
+    let usuario1 = {
+        nombre: "Juan",
+        edad: 23
+    };
+
+    let usuario2 = {
+        nombre: "Ángel",
+        edad: 22
+    };
+
+    let usuario3 = {
+        nombre: "Jara",
+        edad: 20
+    };
+
+    let array = [usuario1, usuario2, usuario3];
+
+    let mayorDeEdad = array.filter(usuario => usuario.edad >= 18);
+
+    let nombres = mayorDeEdad.map(usuario => 
+    usuario.nombre + ` (${usuario.edad})`
+    );
+
+    console.log(nombres);
+    
+        
+
+
+
+</script>

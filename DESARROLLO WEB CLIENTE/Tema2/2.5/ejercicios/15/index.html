@@ -1,0 +1,27 @@
+<script>
+  const estudiantes = [
+    { nombre: "Pepe", calificaciones: [10, 10, 8, 8] },
+    { nombre: "Juan", calificaciones: [4, 8, 3, 1] },
+    { nombre: "Jara", calificaciones: [3, 5, 8, 2] },
+    { nombre: "Nico", calificaciones: [1, 5, 8, 4] },
+    { nombre: "Pera", calificaciones: [0, 8, 5, 2] },
+  ];
+ 
+  const mediaEstudiantes = estudiantes.map((estudiante) => {
+    let notaTotal = 0;
+    estudiante.calificaciones.forEach((nota) => {
+      notaTotal = notaTotal + nota;
+    });
+    let mediaEstudiante = notaTotal / estudiante.calificaciones.length;
+    return { nombre: estudiante.nombre, media: mediaEstudiante };
+  });
+ 
+  console.log(mediaEstudiantes)
+ 
+  const estudianteFiltrados = mediaEstudiantes.filter(
+    (estudiante) => estudiante.media > 7
+  );
+  estudianteFiltrados.forEach((estudiante) => {
+    console.log(estudiante.nombre);
+  });
+</script>

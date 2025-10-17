@@ -1,0 +1,32 @@
+<script>
+
+    let libro1 = {
+        titulo: "Juan mates",
+        numPaginas: 200
+    }
+
+    let libro2 = {
+        titulo: "Jara Jaramillo",
+        numPaginas: 400
+    }
+    
+    let libro3 = {
+        titulo: "Angel melendez",
+        numPaginas: 500
+    }
+
+    let array = [libro1, libro2, libro3];
+
+    let librosMas300Pag = array.filter(libro => libro.numPaginas > 300);
+
+    console.log(librosMas300Pag);
+
+    let librosMas300PagNombre = librosMas300Pag.map(libro => libro.titulo);
+
+    console.log(librosMas300PagNombre);
+
+
+
+
+
+</script>

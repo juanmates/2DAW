@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let producto1 = {
+            nombre: "Galleta",
+            precio: 1,
+            categoria: "Lácteo"
+        };
+        let producto2 = {
+            nombre: "Leche",
+            precio: 2,
+            categoria: "Lácteo"
+        };
+        let producto3 = {
+            nombre: "Cerveza",
+            precio: 1.6,
+            categoria: "Alcohol"
+        };
+        
+        let array = [producto1, producto2, producto3];
+
+        let nuevoArray = array.map(producto => producto.nombre.toUpperCase());
+
+        document.writeln(nuevoArray.join("-"));
+
+        console.log(nuevoArray);
+
+    </script>
+    
+</body>
+</html>
