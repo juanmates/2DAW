@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let factura = {
+            numero: 1,
+            cliente: "Juan",
+            divisa: "€",
+            subtotal: 50,
+            IVA: 1.21,
+            total: function() {
+                return(`${this.subtotal}*${this.IVA}`);
+            }
+        };
+
+        console.log(`La factura ${factura.numero} tiene un importe de ${factura.subtotal} ${factura.divisa}`);
+
+    </script>
+    
+</body>
+</html>

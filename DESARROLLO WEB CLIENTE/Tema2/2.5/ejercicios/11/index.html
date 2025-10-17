@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let producto1 = {
+            nombre: "Leche",
+            cantidad: 1,
+            precio: 2,
+        };
+        let producto2 = {
+            nombre: "Galleta",
+            cantidad: 3,
+            precio: 4,
+        };
+        let producto3 = {
+            nombre: "Cerveza",
+            cantidad: 6,
+            precio: 1.8,
+        };
+
+        let array = [producto1, producto2, producto3];
+
+        const valoresTotales = array.map(producto => {
+            return {
+                nombre: producto.nombre,
+                valorTotal: producto.cantidad * producto.precio
+            };
+        });
+
+        valoresTotales.forEach(producto => {
+            console.log(`${producto.nombre}: $${producto.valorTotal.toFixed(2)}`);
+        });
+
+    </script>
+
+</body>
+</html>
