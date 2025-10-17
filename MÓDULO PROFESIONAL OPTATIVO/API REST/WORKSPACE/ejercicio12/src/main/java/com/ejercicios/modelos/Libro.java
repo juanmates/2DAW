@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Libro {
 	
-	private Integer id;
+	private int id;
 	private String titulo;
 	private String autor;
 	private String editorial;
