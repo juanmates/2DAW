@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.ejercicios.modelo.Cliente;
 
+import jakarta.transaction.Transactional;
+
 public interface ClienteRepository extends JpaRepository<Cliente, Integer>{
 	
 	@Modifying // cada vez que sea un update hay que poner modifying

@@ -71,8 +71,6 @@ public class ClienteServiceIml implements ClienteService{
 		} else {
 			return false;
 		}
-		
-		
 	}
 
 	@Override
@@ -86,14 +84,12 @@ public class ClienteServiceIml implements ClienteService{
 		repositorioDireccion.save(nuevaDireccion);
 		cliente.setDireccion(nuevaDireccion);
 		return repositorio.save(cliente);
-		
 	}
 
 	@Override
 	public void ActualizarASevillaTodosClienteQueEmpiecenPorA() {
 		// TODO Auto-generated method stub
 		repositorio.actualizarCiudadSevillaParaClientesConA();
-		
 	}
 
 
