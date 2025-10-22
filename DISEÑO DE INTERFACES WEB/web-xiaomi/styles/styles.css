@@ -108,10 +108,9 @@ body {
 }
 .cuadradoTexto {
     position: absolute;
-    width: 540px;
-    height: 400px;
-    border: 1px solid red;
-    left: 300px;
+    width: 470px;
+    height: 380px;
+    left: 315px;
     
     
 }
@@ -152,19 +151,48 @@ body {
 }
 .cuadradoTexto2 {
     width: 100%;
-    font-size: 55px;
+    font-size: 45px;
     margin: 0;
 }
 .cuadradoTexto3 {
     display: flex;
     width: 100%;
-    border: 1px solid orange;
-    height: 70px;
+    height: 40px;
     align-items: center;
+    justify-content: right;
+    
 }
 .cuadradoTexto3 img {
-    width: 40px;
+    width: 35px;
+    height: 45px;
+}
+.boton-cuadrado-texto {
+    position: absolute;
+    margin-top: 35px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(31, 31, 31);
+    padding: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 
+main {
+    background-color: #f5f3f3;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-populares {
+    display: flex;
+    border: 1px solid red;
+    height: 20px;
+    width: 910px;
+    justify-content: space-between;
+}
