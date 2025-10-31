@@ -62,18 +62,4 @@ public class TareaResponseController {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

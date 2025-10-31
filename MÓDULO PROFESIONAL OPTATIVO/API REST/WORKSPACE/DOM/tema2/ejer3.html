@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">Soy el primer parrafo</p>
+        <p id="p2">Soy el segundo parrafo</p>
+ </div>
+</body>
+
+<script>
+
+    var pe = document.createElement("p")
+    var texto = document.createTextNode("Soy el nuevo");
+
+    pe.appendChild(texto);
+    pe.setAttribute("id", "p3");
+
+    var div1 = document.getElementById("div1")
+
+    div1.appendChild(pe);
+
+    
+    var pe2 = document.createElement("p")
+    var texto2 = document.createTextNode("Soy el primero ahora");
+
+    pe2.appendChild(texto2);
+
+    pe2.setAttribute("id", "p4");
+
+    ////
+
+    var p1 = document.getElementById("p1")
+
+    div1.insertBefore(pe2, p1);
+
+
+</script>
+
+</html>
