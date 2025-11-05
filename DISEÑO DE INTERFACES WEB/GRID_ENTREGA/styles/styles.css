@@ -1,0 +1,65 @@
+/*  LETRAS  */
+@font-face{
+    src: url('../fonts/Papernotes/Papernotes.otf') format('ttf'), 
+         url('../fonts/Papernotes/Papernotes.ttf') format('woff'),
+         url('../fonts/Papernotes/Papernotes.woff2') format('woff');
+    font-family: 'papernotes';
+}
+@font-face{
+    src: url('../fonts/SimpleHandMades/SimpleHandmade.otf') format('ttf'), 
+         url('../fonts/SimpleHandMades/SimpleHandmade.ttf') format('woff');
+    font-family: 'simplehand';
+}
+
+/******************************************************************************/
+
+.contenedor {
+    position: relative;
+    border: 1px solid;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    width: 98%;
+    height: 600px;
+    margin: 40px auto;
+}
+
+.logo {
+    border: 2px solid;
+    grid-area: 1 / 1 / span 5 / span 3;
+    position: relative;
+}
+
+.menu {
+    border: 2px solid red;
+    grid-area: 2 / 5 / span 3 / span 32;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+}
+
+.categorias {
+    border: 2px solid orange;
+    grid-area: 7 / 1 / span 24 / span 3;
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.div_productos {
+    border: 2px solid green;
+    grid-area: 7 / 5 / span 25 / span 30;
+}
+
+.item {
+    font-family: 'simplehand';
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item5{
+    justify-content: space-around;
+}
+.cat {
+    font-size: 18px;
+}
