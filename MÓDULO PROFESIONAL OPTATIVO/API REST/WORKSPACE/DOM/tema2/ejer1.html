@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDIV">
+        <p>First p element</p>
+        <p>Second p element</p>
+    </div>
+</body>
+
+<script>
+
+    var div1 = document.getElementById("myDIV");
+
+    div1.firstElementChild.style.backgroundColor = "yellow";
+    div1.lastElementChild.style.backgroundColor = "orange";
+
+    var todos = document.getElementsByTagName("p");
+
+    for (let index = 0; index < todos.length; index++) {
+        todos[index].style.color = "red";
+    }
+
+
+
+</script>
+</html>

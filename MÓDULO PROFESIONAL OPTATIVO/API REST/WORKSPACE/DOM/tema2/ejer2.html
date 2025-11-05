@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">Soy el primer parrafo</p>
+        <p id="p2">Soy el segundo parrafo</p>
+ </div>
+</body>
+
+<script>
+
+    var pe = document.createElement("p")
+    var texto = document.createTextNode("Soy el nuevo");
+
+    pe.appendChild(texto);
+
+    pe.setAttribute("id", "p3");
+
+    div1.appendChild(pe);
+
+</script>
+
+</html>
