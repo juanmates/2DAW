@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formulario" id="formulario" action="http://www.google.es" method="get">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" />
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" />
+        <label for="edad">Edad:</label>
+        <input name="edad" type="text" id="edad" maxlength="3" />
+        <label for="provincia">Provincia:</label>
+        <select name="provincia" id="provincia">
+            <option value="0" selected="selected">Seleccione Provincia</option>
+            <option value="H">Huesca</option>
+            <option value="ZA">Zaragoza</option>
+            <option value="T">Teruel</option>
+        </select>
+        <fieldset>
+        <div id="resultado"></div>
+            <input type="reset" name="limpiar" id="limpiar" value="Limpiar" />
+            <input type="submit" name="enviar" id="enviar" value="Enviar" />
+            </fieldset>
+    </form>
+    
+</body>
+</html>
