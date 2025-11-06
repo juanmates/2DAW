@@ -1,7 +1,26 @@
-<script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+</head>
+<body>
+
+		<script>
 	let numero = prompt("Introduce un número:");
 	let cifras = numero.length;
 
-	document.writeln(`<div><i style="color:blue;">El número tiene ${cifras} 
-	cifras</i></div>`);
-</script>
+	document.body.style.color = "blue";
+
+	document.body.innerHTML =`<p>aaaaaaÈl número tiene ${cifras}</p>`;
+
+
+
+
+	</script>
+
+</body>
+</html>

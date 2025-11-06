@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Búsqueda de Incidencias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .buscador {
+            margin-bottom: 20px;
+        }
+        .buscador input, .buscador select, .buscador button {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #eee;
+        }
+        tr:hover {
+            background-color: #fff6cc; /* color amarillo claro */
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .errorMessage {
+            color: red;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sistema de Búsqueda de Incidencias</h1>
+
+    <div class="buscador">
+        <label for="id">ID:</label>
+        <input type="text" id="id" placeholder="Ingrese ID">
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" placeholder="Ingrese Asunto">
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" placeholder="Ingrese Descripción">
+
+        <label for="estado">Estado:</label>
+        <select id="estado">
+            <option value="">Todas</option>
+            <option value="Abierta">Abierta</option>
+            <option value="Cerrada">Cerrada</option>
+            <option value="Pendiente">Pendiente</option>
+        </select>
+
+        <button id="buscarBtn">Buscar</button>
+    </div>
+
+    <div id="resultado"></div>
+    <div class="errorMessage" id="errorMessage"></div>
+
+    <script src="incidencias.js"></script>
+</body>
+</html>
