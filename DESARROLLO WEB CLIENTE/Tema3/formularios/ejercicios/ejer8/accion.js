@@ -37,21 +37,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
     ///////////////////////////////////////////////////////////
 
-    const nombre = document.getElementById("nombre").value;
+    const nombre2 = document.getElementById("nombre").value;
     const apellido1 = document.getElementById("apellido1").value;
     const apellido2 = document.getElementById("apellido2").value;
 
-    var res2 = `${nombre} ${apellido1} ${apellido2}`;
+    var res2 = `${nombre2} ${apellido1} ${apellido2}`;
 
     alert(res2);
 
     ///////////////////////////////////////////////////////////
 
-    const nombre1 = document.getElementsByName("nombre").value;
-    const apellido11 = document.getElementByName("apellido1").value;
-    const apellido21 = document.getElementByName("apellido2").value;
+    const formulario1 = document.getElementsByName("miFormulario");
 
-    var res3 = `${nombre1} ${apellido11} ${apellido21} 2º res`;
+    const nombre1 = document.formulario1.nombre;
+    const apellido11 = document.formulario1.apellido1;
+    const apellido21 = document.formulario1.apellido1;
+
+
+    var res3 = `${nombre1.value} ${apellido11.value} ${apellido21.value} 2º res`;
 
     alert(res3);
 
