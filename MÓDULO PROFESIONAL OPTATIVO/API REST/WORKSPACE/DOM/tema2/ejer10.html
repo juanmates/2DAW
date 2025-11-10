@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+        <li>Sed mattis enim vitae orci</li>
+        <li>Phasellus libero</li>
+        <li>Maecenas nisl arcu</li>
+    </ul>
+</body>
+<script>
+
+    var contador = 1;
+
+    var div1 = document.createElement("div");
+
+    var boton = document.createElement("button");
+    var texto = document.createTextNode("Botón");
+
+    boton.appendChild(texto);
+
+    document.body.appendChild(div1);
+    div1.appendChild(boton);
+
+    
+    var fila = document.createElement("li")
+    
+    boton.addEventListener('click', () => {
+
+        const nuevoElemento = document.createElement('li');
+        nuevoElemento.textContent = `Nuevo elemento ${contador}`;
+        contador++;
+
+        lista.appendChild(nuevoElemento);
+    });
+
+</script>
+</html>
