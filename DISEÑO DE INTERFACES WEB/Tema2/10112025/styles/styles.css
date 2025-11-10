@@ -1,0 +1,76 @@
+.item {
+    font-size: 10px;
+}
+p {
+    font-size: 2em;
+    font-size: 2rem;
+    /* La unidad mínima de rem es 16px */
+}
+img {
+    width: 300px;
+}
+.contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 1000px;
+    background-color: grey;
+    margin: 0 auto;
+}
+.item {
+    width: 25%;
+}
+.contenedor2 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    padding: 2em;
+}
+.primero {
+    width: calc(50% - 4em);
+}
+.contenedor3{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.elemento {
+    width: 25%;
+}
+
+/*
+@font-face
+
+@import url(
+
+
+);
+
+@media print
+*/
+@media (max-width:1024px){
+    /* CSS para móvil */
+    .contenedor{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .item {
+        width: 50%;
+    }
+    .item:last-child,
+    .item:last-child img {
+        width: 100%;
+    }
+}
+@media (max-width:650px){
+    .item {
+        width: 100%;
+        font-size: 2rem;
+    }
+}
+@media (max-width:400px){
+    .elemento {
+        width: 50%;
+        font-size: 2rem;
+    }
+}
+ 
