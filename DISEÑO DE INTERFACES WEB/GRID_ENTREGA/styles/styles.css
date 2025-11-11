@@ -19,7 +19,6 @@
     display: grid;
     grid-template: repeat(30, 1fr) / repeat(30, 1fr);
     width: 98%;
-    height: 600px;
     margin: 40px auto;
 }
 
@@ -48,6 +47,8 @@
 .div_productos {
     border: 2px solid green;
     grid-area: 7 / 5 / span 25 / span 30;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
 }
 
 .item {
@@ -61,5 +62,19 @@
     justify-content: space-around;
 }
 .cat {
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'simplehand';
+}
+.producto {
+    border: 1px solid blueviolet;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+
+}
+.producto img {
+    width: 100%;
 }
