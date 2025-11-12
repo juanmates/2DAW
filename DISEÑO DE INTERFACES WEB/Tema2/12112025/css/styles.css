@@ -1,0 +1,43 @@
+p {
+    font-size: 3rem;
+}
+p:first-of-type::before {
+    content: 'DELANTE';
+    background-color: green;
+    color: white;
+    position: absolute;
+    z-index: 9999;
+    top: 20px;
+    left: 20px;
+}
+p:first-of-type::after {
+    content: '';
+    background-image: url('../img/favicon.ico');
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    background-size: cover;
+    position: relative;
+} 
+p.segundoParrafo::after {
+    content: '***';
+}
+.campo_nombre::before {
+    content:'';
+    background-image: url('../img/favicon.ico');
+    background-size: cover;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 62px;
+    top: 5px;
+}
+.campo_nombre {
+    position: relative;
+}
+input#nombre {
+    padding-left: 31px;
+    height: 24px;
+    font-size: 16px;
+}

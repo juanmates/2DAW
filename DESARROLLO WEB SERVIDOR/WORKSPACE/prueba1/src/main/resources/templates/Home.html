@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+</head>
+<body>
+
+	<h1 th:text="${mensaje}">texto por defecto</h1>
+	
+	<h2 th:text="${nombre}">texto por defecto</h2>
+	
+	<h2 th:utext="${nombre}">texto por defecto</h2>
+	
+	<img th:src="@{./images/images.jpeg}" alt="kiko">
+	
+	<a th:href="@{/}">Ir a Index</a>
+	
+	<p th:if="${role=='admin'}">Es administrador</p>
+	
+	<p th:if="${role!='admin'}">No tienes permisos de administrador</p>
+	
+	<ul>
+		<li th:each="nombre: ${nombres}" th:text="${nombre}"></li>
+	</ul>
+
+	<a th:href="@{/form}">Ir a form</a>
+	
+</body>
+</html>
