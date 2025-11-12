@@ -12,10 +12,11 @@
 }
 
 /******************************************************************************/
-
+body {
+    background-color: rgba(145, 141, 141, 0.267);
+}
 .contenedor {
     position: relative;
-    border: 1px solid;
     display: grid;
     grid-template: repeat(30, 1fr) / repeat(30, 1fr);
     width: 98%;
@@ -23,29 +24,54 @@
 }
 
 .logo {
-    border: 2px solid;
+    
     grid-area: 1 / 1 / span 5 / span 3;
     position: relative;
 }
+.logo img {
+    border-radius: 50%;
+}
 
 .menu {
-    border: 2px solid red;
+
     grid-area: 2 / 5 / span 3 / span 32;
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
 }
-
+.item2:hover {
+    background-color: rgb(103, 183, 236, 0.3);
+    border-radius: 80%;
+}
+.item3:hover {
+    background-color: rgb(103, 183, 236, 0.3);
+    border-radius: 80%;
+}
+.item4:hover {
+    background-color: rgb(103, 183, 236, 0.3);
+    border-radius: 80%;
+}
+.fa-solid:hover {
+    padding: 20px;
+    background-color: rgb(103, 183, 236, 0.3);
+    border-radius: 80%;
+}
+.item1:hover {
+    background-color: rgb(103, 183, 236, 0.3);
+    border-radius: 80%;
+}
 .categorias {
-    border: 2px solid orange;
     grid-area: 7 / 1 / span 24 / span 3;
     display: grid;
     grid-template: repeat(6, 1fr) / 1fr;
     justify-items: center;
     align-items: center;
+    background-color: rgb(165, 42, 42, 0.3);
+    border-radius: 100px;
 }
 
 .div_productos {
-    border: 2px solid green;
+    
+    border-radius: 50px;
     grid-area: 7 / 5 / span 25 / span 30;
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(5, 1fr);
@@ -66,7 +92,10 @@
     font-family: 'simplehand';
 }
 .producto {
-    border: 1px solid blueviolet;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    background-color: rgba(189, 189, 189, 0.911);
+    border-radius: 100px;
     position: relative;
     display: flex;
     align-items: center;
