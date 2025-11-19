@@ -1,0 +1,20 @@
+<p>datos-libro works!</p>
+
+<hr>
+<h1>{{ titulo }}</h1>
+
+<ul [class.aviso]="libro.stock <= 0">
+  <li>el titulo del libro es: {{ libro.titulo }}</li>
+  <li>el nombre del autor es: {{libro.autor}}</li>
+  <li>el precio del libro es de: {{libro.precio}}€</li>
+  <li>el stock en almacen es de: {{libro.stock}}</li>
+  <li>La cantidad es de: {{libro.cantidad}}</li>
+  <li>La imagen del libro es: <img (mousemove)="coords($event)" src="{{libro.imagen}}" alt="Portada del libro"></li>
+</ul>
+
+<button (click)="libro.cantidad = libro.cantidad+1">Sumar Unidad</button>
+<button (click)="libro.cantidad = libro.cantidad-1" [disabled] = "libro.cantidad == 0">Restar Unidad</button>
+
+<br>
+
+<input type="number" placeholder="Introduce la cantidad de libros">

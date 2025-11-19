@@ -1,5 +1,7 @@
 <p>alumno works!</p>
 
+<hr>
+
 <h1 [class] = "rojo">Componente Alumno</h1>
 
 <p>Mi nombre es {{nombre}}</p>
@@ -16,3 +18,29 @@
 
 <input type="checkbox" [checked]="edad >= 18 ? true : false">
 <input type="checkbox" (click)="alerta($event)" [checked]="false">
+<br>
+<input type="text" [(ngModel)] = "texto">
+<div>{{ texto }}</div>
+<br>
+<input type="text" [(ngModel)] = "texto1" [value]="texto2.toLowerCase()">
+<input type="text" [(ngModel)] = "texto2" [value]="texto1.toUpperCase()">
+<br>
+
+<table>
+  <tr>
+    <td><input type="checkbox" name="" id="" [(ngModel)]="check"></td>
+    <td><div [class.fondo]="check">Hola que tal</div></td>
+  </tr>
+  <tr>
+    <td colspan="2"><a [href]="valor" target="_blank">Enlace a CEU</a></td>
+  </tr>
+  <tr>
+    <td><button (click)="cambiarValor()">{{ mostrarCapa ? "Mostrar" : "Ocultar" }}</button></td>
+    <td><div [hidden]="mostrarCapa">Texto mostrado</div></td>
+  </tr>
+  <tr>
+    <td><button (click)="boton()">{{ botonHAB ? "Habilitar" : "Deshabilitar" }}</button></td>
+    <td><button [disabled]="botonHAB">Boton 2</button></td>
+  </tr>
+</table>
+

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-alumno',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './alumno.html',
   styleUrl: './alumno.css',
 })
@@ -34,5 +36,29 @@ export class Alumno {
   alerta(evento:any) {
     alert("Has pinchado en el checkbox");
   }
+
+  texto: string = "";
+  texto1: string = "";
+  texto2: string = "";
+
+  check: string = "fondo";
+
+  marcado(event:any) {
+    return;
+  }
+
+  valor:string = "https://www.ceuandalucia.es";
+
+ mostrarCapa: boolean = true;
+
+ cambiarValor() {
+    this.mostrarCapa = !this.mostrarCapa;
+ }
+
+ botonHAB: boolean = true;
+
+ boton() {
+  this.botonHAB = !this.botonHAB;
+ }
 
 }
