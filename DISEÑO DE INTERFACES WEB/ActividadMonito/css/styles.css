@@ -1,27 +1,31 @@
 .password::before {
+    content:'';
     background-image: url('../img/mono_viendo.png');
     background-size: cover;
     display: inline-block;
     width: 20px;
     height: 20px;
     position: absolute;
-    left: 6px;
+    left: 85px;
     top: 3px;
 }
- 
+.password {
+    position: relative;
+}
 input.contraseña {
-    padding-left: 20px;
+    padding-left: 30px;
     width: 150px;
     height: 20px;
 }
  
 .password:focus-within::before {
+    content:'';
     background-image: url('../img/mono_sin_ver.png');
     background-size: cover;
     display: inline-block;
     width: 20px;
     height: 20px;
     position: absolute;
-    left: 6px;
+    left: 85px;
     top: 3px;
 }
