@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    window.addEventListener("DOMContentLoaded", () => {
+
+        var respuesta = document.getElementById("respuesta");
+        var boton = document.getElementById("boton");
+
+        async function mostrarTabla() {
+            try {
+                const response = await fetch('https://opentdb.com/api.php?amount=5&type=multiple');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json(); // Espera y procesa el JSON
+            console.log(data);
+            const lista = document.createElement("ul");
+            document.getElementById("contenedor").appendChild(lista);
+                data.results.forEach(e => {
+                    lista.innerHTML += `<li>${e.category}</li>`;
+                    lista.innerHTML += `<li>${e.question}</li>`;
+                    lista.innerHTML += `<li>${e.correct_answer}</li>`;
+                    lista.innerHTML += `<hr>`;
+                });               
+
+
+                
+            } catch (error) {
+                console.error('Error al realizar la solicitud:', error); // Manejo de errores
+            }
+        }
+        mostrarTabla();
+    })
+
+
+
+</script>
+<body>
+    <h1>Ejercicio 4</h1>
+    <div id="contenedor"></div>
+    
+
+
+</body>
+</html>
