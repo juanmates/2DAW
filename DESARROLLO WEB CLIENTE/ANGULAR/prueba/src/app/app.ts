@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { UserProfile } from './user-profile/user-profile';
 import { Alumno } from "./alumno/alumno";
 import { DatosLibro } from "./datos-libro/datos-libro";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, UserProfile, Alumno, DatosLibro],
+  imports: [RouterOutlet, UserProfile, Alumno, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -36,5 +37,9 @@ export class App {
     nombre: 'Desarrollo Web en Cliente',
     codigo: 'DWEC101'
   };
+
+  numLibro: string = "";
+
+
 
 }

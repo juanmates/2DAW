@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-datos-libro',
@@ -20,10 +20,26 @@ export class DatosLibro {
   }
 
   coords(evento:any){
-
     console.log(evento.clientX, evento.clientY);
-
   }
+
+  libro2 = {
+    titulo: "Titulo del libro 2",
+    autor: "Autor del libro 2",
+    precio: 5,
+    stock: 2,
+    cantidad: 1,
+    imagen: '/lopera.jpg'
+  }
+
+  libros:any[] = [this.libro, this.libro2];
+
+  @Input()
+  num:string = "";
+
+  @Output()
+    selected = new EventEmitter<any>();
+
 
 
 }

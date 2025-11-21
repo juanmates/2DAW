@@ -19,7 +19,6 @@
 
 <app-alumno></app-alumno>
 
-<app-datos-libro></app-datos-libro>
 <br>
 
 <input type="checkbox" [checked]="marcado">
@@ -29,6 +28,10 @@
 
 <div>{{ asignatura.nombre }}</div>
 <div>{{ asignatura.codigo }}</div>
+
+<input type="text" [(ngModel)]="numLibro">
+
+<!--<app-datos-libro [num]="numLibro" (selected)="mostrarLibro()"></app-datos-libro>-->
 
 
 <router-outlet />

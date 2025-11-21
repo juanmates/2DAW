@@ -1,0 +1,16 @@
+  <h1>{{title}}</h1>
+
+  <textarea cols="50" rows="6" [(ngModel)]="texto"></textarea>
+
+  <p>{{miMensajeHijo}}</p>
+
+
+  <app-mensaje-hijo [textoHijo]="texto" (selected)="mostrarMensajeHijo($event)"></app-mensaje-hijo>
+
+
+
+
+<router-outlet />
+
+
+
