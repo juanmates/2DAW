@@ -20,5 +20,15 @@
 <app-alumno></app-alumno>
 
 <app-datos-libro></app-datos-libro>
+<br>
+
+<input type="checkbox" [checked]="marcado">
+
+<input type="text" [value]="nombre1" [disabled]="deshabilitado">
+
+
+<div>{{ asignatura.nombre }}</div>
+<div>{{ asignatura.codigo }}</div>
+
 
 <router-outlet />

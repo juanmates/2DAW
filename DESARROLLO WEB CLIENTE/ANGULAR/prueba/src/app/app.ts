@@ -27,5 +27,14 @@ export class App {
       return 'menor de edad';
     }
   }
+  marcado: boolean = true;
+
+  nombre1: string = 'Tu Nombre';
+  deshabilitado: boolean = true;
+
+  asignatura = {
+    nombre: 'Desarrollo Web en Cliente',
+    codigo: 'DWEC101'
+  };
 
 }
