@@ -6,3 +6,14 @@
 .menu::nth-last-shild {
     margin-right: 0 !important;
 }
+
+.carousel-item {
+  height: 400px;
+  /* Asegúrate de que las imágenes no se distorsionen */
+}
+.carousel-item img {
+  object-fit: cover; /* O 'contain' para mantener la proporción */
+}
+.col-sm-10{
+    width: 100% !important;
+}
