@@ -1,0 +1,11 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+.fondoGris  {
+    position: relative;
+    background-color: #f1f1f1;
+}
+.logo {
+    width: 40px;
+}
