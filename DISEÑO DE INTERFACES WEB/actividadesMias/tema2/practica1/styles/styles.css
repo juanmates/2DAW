@@ -1,0 +1,27 @@
+.logo {
+    width: 25%;
+}
+.radio{
+    accent-color: blue;
+    border: 1px solid grey !important;
+}
+.radio:has(input:checked){
+    background-color: rgb(232, 239, 248) !important;
+    border: 1px solid rgb(22, 25, 214) !important;
+}
+
+@media (max-width: 900px){
+.contenedor{
+        width: 75% !important;
+        margin: 0 auto !important;
+    }
+    .logo {
+        width: 25%;
+    }
+}
+
+@media (max-width: 500px){
+    .logo {
+        width: 50%;
+    }
+}
