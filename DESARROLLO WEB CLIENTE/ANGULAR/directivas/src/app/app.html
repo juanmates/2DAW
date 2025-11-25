@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" title="Alta de usuario">
+    <h1>Alta de usuario</h1>
+
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" [(ngModel)] = "nombre" name="nombre">
+    <br>
+    <br>
+    <label for="apellidos">Apellidos: </label>
+    <input type="text" id="apellidos" name="apellidos" [(ngModel)] = "apellidos">
+    <br>
+    <br>
+    <button id="boton" (click)="mostrarTexto()">Añadir</button>
+    <div *ngIf="mensaje.length > 0;else sinAlta">{{mensaje}}</div>
+    <ng-template #sinAlta>NO hay nadie registrado</ng-template>
+
+    <br><br>
+
+    <div *ngFor="let x of personas">
+      {{x.nombre}} {{x.apellidos}} {{x.edad}}
+    </div>
+
+    <button id="A" (click)="marcar($event)" value="A">A</button>
+
+    <button id="B" (click)="marcar($event)" value="B">B</button>
+
+    <button id="C" (click)="marcar($event)" value="C">C</button>
+
+    <div>{{respuesta}}</div>
+
+  </form>
+
+  <app-articulo></app-articulo>
+
+</body>
+</html>
+
+<router-outlet />
