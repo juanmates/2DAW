@@ -1,0 +1,43 @@
+.contenedor{
+    background-color: rgb(37, 37, 44);
+    color: white;
+    position: relative;
+    height: 650px;
+}
+.imagen {
+    display: flex;
+    position: relative;
+    justify-content: right;
+    align-items: center;
+}
+.logo {
+    position: absolute;
+    width: 40%;
+}
+.catcha {
+    border: 1px solid rgb(160, 159, 159);
+    margin: 10px;
+}
+.columna1 {
+    width: 45% !important;
+}
+.color {
+    color: rgb(196, 193, 193);
+}
+.boton {
+    width: 15%;
+    align-items: center !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+}
+.scroll {
+    border: 1px solid rgb(160, 159, 159);
+    padding-right: 0;
+    padding-left: 30px;
+    overflow-y: auto;
+    height: 480px;
+}
+li{
+    font-size: 12px;
+}
