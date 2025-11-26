@@ -1,0 +1,136 @@
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.oswald-titulo {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+    background-color: #f1f1f1;
+    font-family: "Lato";
+}
+
+.colorLateral {
+    
+    background-color: #113C51;
+    width: 15%;
+    height: 100vh;
+}
+.contenedor{
+    height: 100vh;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 60px;
+    height: 100vh;
+}
+
+.ojo::before {
+    content:'';
+    background-image: url('../img/ojo.png');
+    background-size: cover;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 235px;
+    top: 4px;
+}
+.ojo {
+    position: relative;
+}
+button {
+    border: 0;
+    background-color: #113C51;
+    color: white;
+    border-radius: 10px;
+}
+.contenedor1 > p {
+    width: 600px;
+    padding: 0;
+    margin: 0;
+}
+.contenedor1 {
+    height: 190px;
+}
+input{
+    border: 0;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+    .colorLateral{
+        width: 100% !important;
+        margin-right: 80px;
+    }
+    .columnageneral {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        align-items: center;        
+    }
+    .formulario {
+        width: 100% !important;
+    }
+    .primeraCol{
+        width: 100% !important;
+    }
+    .segundaCol {
+        width: 75% !important;
+        margin-right: 80px;
+    }
+    .texto2 {
+        display: none;
+    }
+    .contenedor1{
+        margin-right: 50px;
+    }
+}
+@media (max-width: 500px) {
+    .colorLateral{
+        width:50px !important;
+    }
+    .columnageneral {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 0 !important; 
+        padding-bottom: 0 !important;     
+    }
+    .formulario {
+        width: 100% !important;
+    }
+    .primeraCol{
+        width: 100% !important;
+        margin-bottom: 0 !important; 
+        padding-bottom: 0 !important;
+        height: 100px;
+    }
+    .segundaCol {
+        width: 100% !important;
+        margin-top: 0 !important; 
+        padding-top: 0 !important;
+    }
+    .texto2, .texto1, .texto3 {
+        display: none;
+    }
+    .ojo::before {
+    content:'';
+    background-image: url('../img/ojo.png');
+    background-size: cover;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 205px;
+    top: 4px;
+}
+}
