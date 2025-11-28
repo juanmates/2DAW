@@ -1,0 +1,71 @@
+body {
+    background-color: #f1f1f1;
+}
+
+ins {
+    text-decoration: none;
+    color: red;
+}
+.recordar {
+    display: flex !important;
+    align-items: center !important;
+    position: relative;
+}
+.descuento {
+    font-size: 35px;
+}
+.bton1 {
+    background-color: red;
+    color: white;
+    border: 0;
+}
+.datos {
+    color: blue;
+    text-decoration: none;
+}
+.bton1:hover {
+    background-color: #fff;
+    border: 1px solid;
+    color: black;
+}
+
+.bton2:hover {
+    background-color: red;
+    border: 0;
+    color: #fff;
+}
+.contraseña::before {
+    content:'';
+    background-image: url('../img/ojo.png');
+    background-size: cover;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 855px;
+    top: 340px;
+    z-index: 9999;
+}
+
+@media screen and (max-width:550px){
+    .container{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .der {
+        width: 100%;
+        margin-right: 20px;
+    }
+    .izq {
+        width: 100%;
+        margin-right: 20px;
+    }
+    .bton1 {
+        padding: 5px !important;
+        width: 150px!important;
+    }
+    .bton2 {
+        padding: 5px !important;
+        width: 150px!important;
+    }
+}
