@@ -1,62 +1,47 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
-export interface Persona {
-  nombre: string;
-  apellidos: string;
-  edad: number;
-}
-
+import { RouterOutlet } from '@angular/router';
+import { Persona } from './model/Persona';
+import { Articulo } from "./articulo/articulo";
 
 @Component({
-  selector: 'app-root, app-articulo',
-  imports: [RouterOutlet, CommonModule, FormsModule, NgIf],
+  selector: 'app-root',
+  imports: [RouterOutlet, CommonModule, FormsModule, NgIf, Articulo],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
+  nombre: string = '';
+  apellidos: string = '';
+  parrafo: string = '';
 
-  nombre: string = "";
-
-  apellidos:string = "";
-
-  mensaje: string = "";
-
-  mostrarTexto(){
-   // this.nombre = evento.target.value;
-   // this.apellidos = evento.target.value;
-    this.mensaje = `Alta correcta del usuario ${this.nombre} ${this.apellidos}`;
+  mostrarParrafo() {
+    this.parrafo = `Alta correcta del usuario ${this.nombre} ${this.apellidos}`;
   }
 
-  personas: Persona[] = [
-    {
-      nombre: "Pepe",
-      apellidos: "Lopez",
-      edad: 35
-    },
-    {
-      nombre: "Rosa",
-      apellidos: "Torres",
-      edad: 16
-    }
-  ]
+  persona1 = {
+    nombre: 'Juan',
+    apellidos: 'Matés Castillo',
+    edad: 30,
+  };
+  persona2 = {
+    nombre: 'Joaquin',
+    apellidos: 'Del Castillo',
+    edad: 50,
+  };
 
-   respuesta: string = "";
+  personas: Persona[] = [this.persona1, this.persona2];
 
-  marcar(evento:any){
-    if(evento.target.value == "A"){
-      this.respuesta =  "Se ha pulsado el boton A";
-    } else if (evento.target.value == "B"){
-      this.respuesta =  "Se ha pulsado el boton B";
-    } else if (evento.target.value == "C"){
-      this.respuesta =  "Se ha pulsado el boton C";
-    }
-    else {
-      this.respuesta = "No se ha pulsado ningún boton";
+  mensajeBotones: string = 'No ha seleccionado ningún botón';
+
+  tunearMensaje($event: any) {
+    if ($event.target.value == 'A') {
+      this.mensajeBotones = 'Pulsado el botón A';
+    } else if ($event.target.value == 'B') {
+      this.mensajeBotones = 'Pulsado el botón B';
+    } else {
+      this.mensajeBotones = 'Pulsado el botón C';
     }
   }
-
-
 }

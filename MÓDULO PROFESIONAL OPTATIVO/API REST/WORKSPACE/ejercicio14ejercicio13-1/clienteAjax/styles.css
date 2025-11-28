@@ -1,0 +1,23 @@
+div {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+table {
+    border: 1px solid; 
+    border-collapse: collapse;
+}
+th {
+    border: 1px solid;
+    background-color: #9b999959;
+    padding: 10px;
+}
+td{
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+}
+tr:hover {
+    background-color: yellow;
+}

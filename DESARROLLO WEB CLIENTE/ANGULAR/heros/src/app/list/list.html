@@ -1,0 +1,17 @@
+<hr>
+<h2>Listado de héroes</h2>
+
+@for (item of heroes; track $index) {
+  <p>{{item}}</p>
+}
+<p><button (click)="borrarUltimoHeroe()">
+  Borrar el último héroe
+</button></p>
+
+
+@if (heroeBorrado) {
+  <p>El héroe borrado es <strong>{{ heroeBorrado }}</strong></p>
+} @else {
+  <p>No se ha borrado nada</p>
+}
+
