@@ -1,0 +1,4 @@
+@for (item of (pokemonList$ | async)?.results; track $index) {
+  <div>{{item.name}}</div>
+}
+<router-outlet />
