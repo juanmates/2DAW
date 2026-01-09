@@ -1,0 +1,17 @@
+<h1>POSTS</h1>
+<button (click)="cargarPosts()">Cargar todos los posts</button>
+
+<table border="1" *ngIf="posts.length > 0" style="margin-top: 20px;">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Contenido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+    </tr>
+  </tbody>
+</table>

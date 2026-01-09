@@ -1,16 +1,24 @@
 package com.examenA.controlador;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.examenA.modelo.Entrada;
 import com.examenA.servicio.EntradaServicio;
 
 
 
-@Controller
-@CrossOrigin(origins="*")
+@RestController
 @RequestMapping("/api/entradas")
+@CrossOrigin(origins="*")
 public class EntradaController {
 	
 	
@@ -18,9 +26,16 @@ public class EntradaController {
 	EntradaServicio servicio;
 	
 	
-	@PutMapping()
-	private Entrada postComprar(Entrada entrada) {
-		return servicio.crearEntrada(entrada);
+	@PostMapping()
+	private ResponseEntity<Entrada> postComprar(@RequestBody Entrada entrada) {
+		Entrada creada =  servicio.crearEntrada(entrada);
+		return ResponseEntity.ok(creada);
 	}
 
+	@GetMapping()
+	public ResponseEntity<List<Entrada>> getEntradas() {
+		List<Entrada> entradas = servicio.obtenerEntradas();
+		return ResponseEntity.ok(entradas);
+	}
+	
 }
