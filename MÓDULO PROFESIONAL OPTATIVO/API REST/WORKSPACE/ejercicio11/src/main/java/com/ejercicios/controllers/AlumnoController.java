@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ejercicios.modelo.Alumno;
 
-/*
+
 @RestController
 @RequestMapping("/alumnos")
 public class AlumnoController {
@@ -114,4 +114,3 @@ private List<Alumno> alumnos = new ArrayList<Alumno>();
 	}
 
 }
-*/

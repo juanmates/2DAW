@@ -1,0 +1,11 @@
+<div>
+  <input type="number" [(ngModel)]="userId" placeholder="Introduce ID de usuario">
+  <button (click)="buscarUsuario()">Buscar Usuario</button>
+
+  <div *ngIf="user">
+    <p><strong>Nombre:</strong> {{user.name}}</p>
+    <p><strong>Usuario:</strong> {{user.username}}</p>
+    <p><strong>Correo:</strong> {{user.email}}</p>
+    <p><strong>Dirección:</strong> {{user.address.street}}, {{user.address.city}}</p>
+  </div>
+</div>
