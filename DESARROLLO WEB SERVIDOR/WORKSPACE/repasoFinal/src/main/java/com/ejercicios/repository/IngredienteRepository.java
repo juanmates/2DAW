@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ejercicios.modelo.Ingrediente;
 
-public interface IngredienteRepository extends JpaRepository<Ingrediente, Integer>{
+import java.util.List;
 
+public interface IngredienteRepository extends JpaRepository<Ingrediente, Long> {
+	List<Ingrediente> findByCaloriasGreaterThan(Integer calorias);
 }

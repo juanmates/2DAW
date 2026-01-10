@@ -1,52 +1,32 @@
 package com.ejercicios.modelo;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "recetas")
 public class Receta {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
 	private Long id;
-	
-	@Column(name="nombre")
+
 	private String nombre;
-	
-	@Column(name="puntuacion")
+
 	private Integer puntuacion;
-	
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "ingrediente_receta",
-			joinColumns = {@JoinColumn(name = "id_ingrediente")} , 
-			inverseJoinColumns = {@JoinColumn(name = "id_receta")})
-	private List<Ingrediente> ingredientes;
-	
+
+	@ManyToMany
+	@JoinTable(name = "receta_ingrediente", joinColumns = @JoinColumn(name = "receta_id"), inverseJoinColumns = @JoinColumn(name = "ingrediente_id"))
+	private Set<Ingrediente> ingredientes = new HashSet<>();
+
 	@ManyToOne
-	@JoinColumn(name = "id_muestrario")
 	private Muestrario muestrario;
-	
-	
+
+// Constructores, getters y setters
 	public Receta() {
-		super();
 	}
-	
-	public Receta(Long id, String nombre, Integer puntuacion) {
-		super();
-		this.id = id;
+
+	public Receta(String nombre, Integer puntuacion) {
 		this.nombre = nombre;
 		this.puntuacion = puntuacion;
 	}
@@ -75,19 +55,19 @@ public class Receta {
 		this.puntuacion = puntuacion;
 	}
 
-	public List<Ingrediente> getIngredientes() {
+	public Set<Ingrediente> getIngredientes() {
 		return ingredientes;
 	}
 
-	public void setIngredientes(List<Ingrediente> ingredientes) {
+	public void setIngredientes(Set<Ingrediente> ingredientes) {
 		this.ingredientes = ingredientes;
 	}
 
-	@Override
-	public String toString() {
-		return "Receta [id=" + id + ", nombre=" + nombre + ", puntuacion=" + puntuacion + ", ingredientes="
-				+ ingredientes + "]";
+	public Muestrario getMuestrario() {
+		return muestrario;
 	}
-	
-	
+
+	public void setMuestrario(Muestrario muestrario) {
+		this.muestrario = muestrario;
+	}
 }

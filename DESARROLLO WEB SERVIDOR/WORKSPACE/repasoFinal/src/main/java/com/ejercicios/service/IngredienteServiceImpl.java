@@ -1,8 +1,5 @@
 package com.ejercicios.service;
 
-
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,35 +8,39 @@ import com.ejercicios.repository.IngredienteRepository;
 
 import jakarta.transaction.Transactional;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 @Transactional
-public class IngredienteServiceImpl implements IngredienteService{
-	
-	@Autowired
-	private IngredienteRepository repositorio;
+public class IngredienteServiceImpl implements IngredienteService {
 
-	@Override
-	public void crearIngrediente(Ingrediente e) {
-		repositorio.save(e);		
-	}
+    @Autowired
+	IngredienteRepository ingredienteRepository;
 
-	@Override
-	public List<Ingrediente> leerIngredientes() {
-		return repositorio.findAll();
-		
-	}
+    @Override
+    public List<Ingrediente> findAll() {
+        return ingredienteRepository.findAll();
+    }
 
-	@Override
-	public void eliminarIngrediente(Ingrediente e) {
-		repositorio.delete(e);
-		
-	}
+    @Override
+    public Optional<Ingrediente> findById(Long id) {
+        return ingredienteRepository.findById(id);
+    }
 
-	@Override
-	public Ingrediente actualizarIngrediente(Ingrediente ingrediente) {
-		// TODO Auto-generated method stub
-		return repositorio.save(ingrediente);	
-	}
+    @Override
+    public Ingrediente save(Ingrediente ingrediente) {
+        return ingredienteRepository.save(ingrediente);
+    }
 
+    @Override
+    public void deleteById(Long id) {
+        ingredienteRepository.deleteById(id);
+    }
 
+    @Override
+    public List<Ingrediente> findByCaloriasGreaterThan(Integer calorias) {
+        return ingredienteRepository.findByCaloriasGreaterThan(calorias);
+    }
 }
+

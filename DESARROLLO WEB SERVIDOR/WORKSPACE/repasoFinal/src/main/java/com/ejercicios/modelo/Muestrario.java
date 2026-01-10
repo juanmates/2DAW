@@ -1,39 +1,26 @@
 package com.ejercicios.modelo;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "muestrarios")
 public class Muestrario {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
 	private Long id;
-	
-	@Column(name="nombre")
+
 	private String nombre;
-	
+
 	@OneToMany(mappedBy = "muestrario", cascade = CascadeType.ALL)
-	private List<Receta> recetas;
-	
+	private Set<Receta> recetas = new HashSet<>();
+
 	public Muestrario() {
-		super();
 	}
-	
-	public Muestrario(Long id, String nombre, List<Receta> recetas) {
-		this.id = id;
+
+	public Muestrario(String nombre) {
 		this.nombre = nombre;
-		this.recetas = recetas;
 	}
 
 	public Long getId() {
@@ -52,19 +39,11 @@ public class Muestrario {
 		this.nombre = nombre;
 	}
 
-	public List<Receta> getRecetas() {
+	public Set<Receta> getRecetas() {
 		return recetas;
 	}
 
-	public void setRecetas(List<Receta> recetas) {
+	public void setRecetas(Set<Receta> recetas) {
 		this.recetas = recetas;
 	}
-
-	@Override
-	public String toString() {
-		return "Muestrario [id=" + id + ", nombre=" + nombre + ", recetas=" + recetas + "]";
-	}
-	
-	
-
 }

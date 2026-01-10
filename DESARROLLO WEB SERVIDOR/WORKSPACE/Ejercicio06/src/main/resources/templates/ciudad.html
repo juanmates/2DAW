@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Búsqueda por Provincia</title>
+</head>
+<body>
+    <h1>Búsqueda de Clientes por Provincia</h1>
+   
+    <form th:action="@{/clientes/ciudad}" method="get">
+        <label for="ciudad">Introduce el nombre de la ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" th:value="${provincia}" required />
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div th:if="${clientes}">
+        <h2>Resultados de la búsqueda</h2>
+        <ul>
+            <li th:each="cliente : ${clientes}" th:text="${cliente.nombre}"></li>
+        </ul>
+    </div>
+
+    <div th:if="${clientes.empty}">
+        <p>No se encontraron clientes en la ciudad ingresada.</p>
+    </div>
+</body>
+</html>

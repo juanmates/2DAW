@@ -1,45 +1,28 @@
 package com.ejercicios.modelo;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
-import jakarta.persistence.JoinColumn;
+import jakarta.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "ingredientes")
 public class Ingrediente {
-	
-	// Atributos
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
 	private Long id;
-	
-	@Column(name = "nombre")
+
 	private String nombre;
-	
-	@Column(name = "calorias")
+
 	private Integer calorias;
-	
+
 	@ManyToMany(mappedBy = "ingredientes")
-	private List<Receta> recetas;
-	
+	private Set<Receta> recetas = new HashSet<>();
+
+// Constructores, getters y setters
 	public Ingrediente() {
-		super();
 	}
-	
-	public Ingrediente(Long id, String nombre, Integer calorias) {
-		super();
-		this.id = id;
+
+	public Ingrediente(String nombre, Integer calorias) {
 		this.nombre = nombre;
 		this.calorias = calorias;
 	}
@@ -68,19 +51,12 @@ public class Ingrediente {
 		this.calorias = calorias;
 	}
 
-	public List<Receta> getRecetas() {
+	public Set<Receta> getRecetas() {
 		return recetas;
 	}
 
-	public void setRecetas(List<Receta> recetas) {
+	public void setRecetas(Set<Receta> recetas) {
 		this.recetas = recetas;
 	}
-
-	@Override
-	public String toString() {
-		return "Ingrediente [id=" + id + ", nombre=" + nombre + ", calorias=" + calorias + ", recetas=" + recetas + "]";
-	}
-	
-	
-
 }
+

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalle Cliente</title>
+</head>
+<body>
+    <h1>Detalle Cliente</h1>
+    <p>ID: <span th:text="${cliente.id}"></span></p>
+    <p>Nombre: <span th:text="${cliente.nombre}"></span></p>
+    <p>Dirección: <span th:text="${cliente.direccion.calle}"></span>, <span th:text="${cliente.direccion.ciudad}"></span></p>
+    
+    <a th:href="@{/clientes}">Volver</a>
+</body>
+</html>
