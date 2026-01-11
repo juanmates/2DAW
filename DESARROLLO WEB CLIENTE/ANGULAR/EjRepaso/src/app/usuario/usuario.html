@@ -1,11 +1,8 @@
-<div>
-  <input type="number" [(ngModel)]="userId" placeholder="Introduce ID de usuario">
-  <button (click)="buscarUsuario()">Buscar Usuario</button>
-
-  <div *ngIf="user">
-    <p><strong>Nombre:</strong> {{user.name}}</p>
-    <p><strong>Usuario:</strong> {{user.username}}</p>
-    <p><strong>Correo:</strong> {{user.email}}</p>
-    <p><strong>Dirección:</strong> {{user.address.street}}, {{user.address.city}}</p>
-  </div>
-</div>
+<form>
+  <input type="number" placeholder="Escribe un numero" [(ngModel)]="id" name="id">
+  <button (click)="getUsuario()">Enviar</button>
+  <p>Nombre: {{(usuario | async)?.name}}</p>
+  <p>Usuario: {{(usuario | async)?.username}}</p>
+  <p>Correo: {{(usuario | async)?.email}}</p>
+  <p>Direccion: {{(usuario | async)?.address?.street}} | {{(usuario | async)?.address?.city}}</p>
+</form>

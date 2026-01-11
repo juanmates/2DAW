@@ -1,0 +1,14 @@
+<div *ngIf="squad$ | async as patata">
+    <h1>{{patata.squadName}}</h1>
+    <p>{{patata.homeTown}}  {{patata.formed}}</p>
+
+    <div *ngFor="let miembro of patata.members">
+        <h2> {{miembro.name}}</h2>
+        <p>Edad: {{miembro.age}}</p>
+        <p>Identidad Secreta: {{miembro.secretIdentity}}</p>
+        <p>Poderes:</p>
+        <ul>
+            <li *ngFor="let poder of miembro.powers">{{poder}}</li>
+        </ul>
+    </div>
+</div>

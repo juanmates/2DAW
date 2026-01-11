@@ -1,21 +1,23 @@
+import { UsuarioModel } from './../model/usuario';
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { UsuarioService } from '../services/usuario-service';
+import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-usuario',
-  imports: [FormsModule, CommonModule],
-  templateUrl: './usuario.html'
+  imports: [AsyncPipe, FormsModule],
+  templateUrl: './usuario.html',
+  styleUrl: './usuario.css',
 })
-export class UsuarioComponent {
-  userId: string = '';
-  user: any = null;
+export class Usuario {
+  id:number = 0;
+  usuario = new Observable<UsuarioModel>();
 
-  constructor(private http: HttpClient) {}
+  constructor(private usuariosService: UsuarioService) {}
 
-  buscarUsuario() {
-    this.http.get(`https://jsonplaceholder.typicode.com/users/${this.userId}`)
-      .subscribe(data => this.user = data);
+  getUsuario(): any {
+    this.usuario = this.usuariosService.getUsuario(this.id);
   }
 }

@@ -1,0 +1,15 @@
+<h1>POSTS</h1>
+<button (click)="mostrarLista()">Mostrar lista</button>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  @for (post of (posts | async); track $index) {
+  <tr>
+    <td>{{ post.title }}</td>
+    <td>{{ post.body }}</td>
+  </tr>
+  }
+</table>
