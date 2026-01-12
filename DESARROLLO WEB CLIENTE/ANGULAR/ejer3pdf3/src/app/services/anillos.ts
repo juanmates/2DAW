@@ -31,9 +31,12 @@ export class Anillos {
     return this.personajes;
    }
 
-   borrarPersonaje(idAborrar:number){
-    this.personajes.splice(idAborrar, 1)
-    return this.personajes;
+   borrarPersonaje(idee:number): void{
+    this.personajes =  this.personajes.filter((p) => p.id !== idee);
+   }
+
+   agregarPersonaje(personaje: Personaje): void {
+    this.personajes.push(personaje);
    }
 
 

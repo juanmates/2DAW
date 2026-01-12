@@ -1,0 +1,14 @@
+<h1>POSTS</h1>
+<button (click)="getTabla()">VER POSTS</button>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  @for (post of (posts | async); track $index) {
+  <tr>
+    <td>{{ post.title }}</td>
+    <td>{{ post.body }}</td>
+  </tr>
+  }
+</table>

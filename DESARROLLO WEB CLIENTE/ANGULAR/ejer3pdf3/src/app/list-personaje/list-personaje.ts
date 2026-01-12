@@ -21,8 +21,10 @@ export class ListPersonaje implements OnInit{
     this.personajes = of(this.servicio.getPersonajes());
   }
 
-  borrarPersonaje(id:number) {
-    return this.servicio.borrarPersonaje(id);
+  borrarPersonaje(id:number):void {
+    this.servicio.borrarPersonaje(id);
+    this.personajes = of(this.servicio.getPersonajes());
+
   }
 
 }
