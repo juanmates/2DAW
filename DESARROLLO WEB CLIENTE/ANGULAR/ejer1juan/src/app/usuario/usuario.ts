@@ -12,17 +12,11 @@ import { AsyncPipe, CommonModule } from '@angular/common';
   styleUrl: './usuario.css',
 })
 export class Usuario {
-
   num: number = 0;
-
   usuario = new Observable<UsuarioModel>;
-
   constructor(private servicio: UsuarioServicio){}
-
   getUsuario() {
     this.usuario = this.servicio.getUsuario(this.num);
     console.log(this.usuario);
   }
-
-
 }

@@ -11,15 +11,9 @@ import { AsyncPipe } from '@angular/common';
   styleUrl: './post.css',
 })
 export class Post {
-
   posts = new Observable<PostModel[]>;
-
   constructor(private servicio: PostsService){}
-
-
   getTabla() {
     this.posts = this.servicio.getPosts();
   }
-
-
 }
