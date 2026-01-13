@@ -1,0 +1,7 @@
+<form action="" name="formulario">
+  <input type="text" placeholder="titulo" name="titulo" id="titulo" [(ngModel)] = "this.libro.titulo">
+  <input type="text" placeholder="autor" name="autor" id="autor" [(ngModel)] = "this.libro.autor">
+  <button routerLink="/libros" (click)="modificarLibro()">Guardar Cambios</button>
+  <br>
+  <button routerLink="/libros">Atrás</button>
+</form>

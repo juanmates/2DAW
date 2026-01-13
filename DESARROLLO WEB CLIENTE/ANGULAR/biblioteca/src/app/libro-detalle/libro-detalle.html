@@ -1,0 +1,10 @@
+@for (libro of ListaLibros; track $index) {
+  @if (libro.id == id) {
+
+    <h2>{{libro.titulo}} <small><a [routerLink]="['/libroModificar', libro.id]">Modificar Libro</a></small></h2>
+
+    <div>{{libro.id}}</div>
+    <div>{{libro.autor}}</div>
+  }
+}
+<button routerLink="/libros">VOLVER</button>
