@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sensores Robot</title>
+</head>
+<body>
+
+	<h1>Sensores del robot</h1>
+	
+	<h2 th:text="Sensores del robot: ${robot.modelo}"></h2>
+	
+	<table>
+		
+		<tr>
+			<th>Tipo</th>
+			<th>Presición</th>
+			<th>Rango Máx.</th>
+			<th>Activo</th>
+		</tr>
+		
+		
+	</table>
+	
+	<a th:href="@{/robots}">Volver</a>
+
+</body>
+</html>

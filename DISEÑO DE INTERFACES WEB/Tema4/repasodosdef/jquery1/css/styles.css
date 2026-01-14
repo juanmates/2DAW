@@ -1,0 +1,172 @@
+.parrafo {
+    display: flex;
+}
+
+.formulario1 {
+    margin-top: 30px;
+    width: 90%;
+    background-color: blueviolet;
+    margin: auto;
+    box-shadow: 5px 5px 4px red; /*para el sombreado*/
+}
+
+.parrafo2 {
+    display: flex;
+    left: 0px;
+    top: 0px;
+}
+
+.mb-3 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.texto {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-control {
+    width: 100%;
+}
+
+
+
+.form-label {
+    display: flex;
+    width: 20%;
+}
+
+#check {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 20px;
+}
+
+#exampleCheck1 {
+    padding: 2px;
+}
+
+#boton{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px !important;
+}
+
+#divboton{
+    margin-bottom: 10px;
+}
+
+.ojo {
+    display: inline-block;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    z-index: 999;
+    right: 10px;
+    margin: 0 auto;
+    top: -2px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+}
+
+body {
+    width: 100%;
+    font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+}
+
+@media (max-width: 425px) {
+
+    .mi-header {
+        display: none;
+    }
+
+    body {
+        font-size: small;
+
+    }
+
+    .formulario1 {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .mb-3 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .texto {
+        display: flex;
+        width: 70%;
+    }
+
+    .form-label {
+        display: flex;
+        width: 100%;
+    }
+
+    .form-label {
+        display: flex;
+        width: 20%;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 500px) {
+
+    .mi-header {
+        display: none;
+    }
+
+    body {
+        font-size: small;
+        background-color: aqua;
+
+    }
+
+    .formulario1 {
+        display: flex;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .mb-3 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 2px;
+    }
+
+    .texto {
+        display: flex;
+        width: 70%;
+    }
+
+    .form-label {
+        display: flex;
+        width: 100%;
+    }
+
+    .form-label {
+        display: flex;
+        width: 10%;
+    }
+}
