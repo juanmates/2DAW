@@ -39,6 +39,4 @@ export class Anillos {
     this.personajes.push(personaje);
    }
 
-
-
 }

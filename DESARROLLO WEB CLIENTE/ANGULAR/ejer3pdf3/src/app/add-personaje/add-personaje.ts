@@ -29,7 +29,5 @@ export class AddPersonaje {
       this.servicio.agregarPersonaje(this.personajeNuevo);
       this.personajeNuevo = {id: 0, nombre: "", raza: ""};
     }
-
   }
-
 }

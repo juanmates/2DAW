@@ -1,10 +1,8 @@
 <form action="" name="formulario">
-
   <label for="numero">Escriba un número: </label>
   <input type="number" id="numero" [(ngModel)]="num"  name="num">
   <button (click)="getUsuario()">Enviar</button>
   <div>
-
     <p>Nombre: {{(usuario | async)?.name}}</p>
     <p>Usuario: {{(usuario | async)?.username}}</p>
     <p>Correo: {{(usuario | async)?.email}}</p>
@@ -14,8 +12,5 @@
       <li>{{(usuario | async)?.address?.street}}</li>
       <li>{{(usuario | async)?.address?.suite}}</li>
     </ul>
-
   </div>
-
-
 </form>

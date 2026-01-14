@@ -1,5 +1,4 @@
 <div *ngFor="let item of (aleatorio | async)?.results">
-
   <p>Nombre: {{ item.name.first }}</p>
   <p>Apellidos: {{ item.name.last }}</p>
   <p>Correo: {{ item.email }}</p>
@@ -7,6 +6,4 @@
   <p>Imagen:
     <img src="{{ item.picture.large }}" alt="">
   </p>
-
-
 </div>

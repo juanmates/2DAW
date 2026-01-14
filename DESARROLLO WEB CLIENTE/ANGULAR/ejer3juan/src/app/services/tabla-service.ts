@@ -15,6 +15,4 @@ export class TablaService {
   getTabla(): Observable<AleatorioModel>{
     return this.http.get<AleatorioModel>(this.URL);
   }
-
-
 }

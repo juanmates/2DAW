@@ -20,7 +20,4 @@ export class Tabla implements OnInit{
   ngOnInit(): void {
     this.aleatorio = this.servicio.getTabla();
   }
-
-
-
 }
