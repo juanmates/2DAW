@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+<meta charset="UTF-8">
+<title>LISTADO DE ROBOTS</title>
+</head>
+<body>
+
+	<h1>Robots del centro de investigación</h1>
+	
+	<table>
+		
+		<tr>
+			<th>ID</th>
+			<th>Modelo</th>
+			<th>Categoría</th>
+			<th>Batería</th>
+			<th>Operativo</th>
+			<th>Ver sensores</th>
+		</tr>
+		
+		<tr th:each="robot : ${robots}">
+			
+			<td th:text="${robot.id}"></td>
+			<td th:text="${robot.modelo}"></td>
+			<td th:text="${robot.categoria}"></td>
+			<td th:text="${robot.nivelBateria}"></td>
+			<td th:text="${robot.operativo != false ? 'Sí' : 'No'}"></td>
+			<td>
+				<a th:href="@{/robots/sensoresRobot}">Ver sensores</a>
+			</td>
+		
+		</tr>
+		
+	</table>
+
+</body>
+</html>

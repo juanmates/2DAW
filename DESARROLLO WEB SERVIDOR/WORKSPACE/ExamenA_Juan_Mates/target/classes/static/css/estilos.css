@@ -1,0 +1,41 @@
+body {
+font-family: Arial, sans-serif;
+margin: 40px;
+background-color: #fafafa;
+}
+
+
+h1, h2 {
+color: #333;
+}
+
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+
+th, td {
+border: 1px solid #ccc;
+padding: 8px;
+text-align: center;
+}
+
+
+th {
+background-color: #eaeaea;
+}
+
+
+a {
+text-decoration: none;
+color: #0066cc;
+font-weight: bold;
+}
+
+
+a:hover {
+text-decoration: underline;
+}

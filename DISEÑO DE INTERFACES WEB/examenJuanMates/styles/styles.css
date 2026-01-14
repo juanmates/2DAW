@@ -1,0 +1,157 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.lista {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-right: 40px;
+}
+.head {
+    background-color: #f3f3f3;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.col {
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.seccion1, .seccion2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.seccion1 div {
+    width: 100%;
+}
+.seccion1-1 {
+    display: flex;
+}
+.seccion1-2 {
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.seccion1-1 img {
+    width: 100%;
+}
+.seccion1-2-1 {
+    border-radius: 20px;
+    height: 450px;
+    width: 300px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+.formulario {
+    text-align: center;
+    color: white;
+}
+label {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top; 
+}
+
+input {
+    border-radius: 20px !important;
+    width: 50% !important;
+    padding: 10px !important;
+}
+.boton {
+    color: #333; 
+    background-color: #D84345; 
+    width: 130px; 
+    border-radius: 40px ;
+}
+.seccion2 {
+    background-color: #000;
+    height: 70px;
+    color: white;
+}
+
+.password {
+    content:"";
+    background-image: url('../img/personIcon.png');
+    background-size: cover;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 85px;
+    top: 30px;
+}
+
+.oculto {
+    color: white; 
+    margin-top:100px; 
+    font-weight: 90px !important;
+}
+
+.titulo {
+    color: white; 
+    margin-top: 100px;
+}
+
+
+
+@media (max-width: 450px) {
+
+    .titulo {
+        margin-top: 10px !important;
+    }
+
+    .menu {
+        display: none;
+    }
+    .seccion1-1 {
+        display: none;
+    }
+    .seccion1-2 {
+        margin: 0;
+        width: 90% !important;
+    }
+    .seccion1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .seccion1-2-1 {
+        height: 330px;
+        margin-top: 20px;
+    }
+    .seccion2 {
+        margin-top: 10px;
+    }
+    .partForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arriba {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        width: 90% !important;
+    }
+    
+
+
+
+}
