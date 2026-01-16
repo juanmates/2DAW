@@ -97,7 +97,7 @@ document.getElementById("formActualizar").addEventListener("submit", async (e) =
 // D) ENTRADAS NO COMPRADAS EN TAQUILLA
 document.getElementById("btnNoTaquilla").addEventListener("click", async (e) => {
   try {
-    const response = await fetch(API_BASE, {
+    const response = await fetch(API_BASE+"/NoTaquilla", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -108,6 +108,53 @@ document.getElementById("btnNoTaquilla").addEventListener("click", async (e) => 
       document.getElementById("noTaquillaResultado").innerHTML +=
         mostrarEntrada(element);
     });
+
+  } catch (error) {
+    console.log("ERROR NO HA CARGADO");
+  }
+});
+
+// E) Modificar número de entradas (PATCH)
+document.getElementById("formPatchNumero").addEventListener("submit", async (e) => {
+   e.preventDefault();
+  const f = e.target;
+
+  const body = {
+    id: Number(f.id.value),
+    numeroEntradas: Number(f.numeroEntradas.value),
+  };
+  
+  try {
+    const response = await fetch(API_BASE+`/nuevasEntradas/${body.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    const data = await response.json();
+    document.getElementById("patchNumeroResultado").innerHTML = mostrarEntrada(data);
+
+  } catch (error) {
+    console.log("ERROR NO HA CARGADO");
+  }
+});
+
+// F) DELETE POR NOMBRE
+document.getElementById("formDelete").addEventListener("submit", async (e) => {
+   e.preventDefault();
+  const f = e.target;
+
+  const body = {
+    nombreComprador: f.nombreComprador.value,
+  };
+  
+  try {
+    const response = await fetch(API_BASE+`/${body.nombreComprador}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    const data = await response.json();
+    document.getElementById("deleteResultado").innerHTML = `SE HAN BORRADO ${data} ENTRADAS`;
 
   } catch (error) {
     console.log("ERROR NO HA CARGADO");

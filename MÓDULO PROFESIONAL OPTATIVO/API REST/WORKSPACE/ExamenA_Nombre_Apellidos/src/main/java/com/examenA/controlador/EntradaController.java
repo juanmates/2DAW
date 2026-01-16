@@ -5,7 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -56,7 +59,23 @@ public class EntradaController {
 		return ResponseEntity.ok(entradasNoTaquilla);
 	}
 	
+	@PatchMapping("/nuevasEntradas/{id}")
+	public ResponseEntity<Entrada> actualizarNumeroEntradas(@PathVariable Long id, @RequestBody Entrada entrada) {
+		List<Entrada> lista = servicio.obtenerEntradas();
+		for (Entrada ent : lista) {
+			if(ent.getId() == id) {
+				ent = servicio.actualizarNumeroEntradas(id, entrada);
+				return ResponseEntity.ok(ent);
+			}
+		}
+		return ResponseEntity.notFound().build();
+	}
 	
+	@DeleteMapping("/{nombreComprador}")
+	public ResponseEntity<Integer> eliminarEntradasPorComprador(@PathVariable String nombreComprador) {
+		Integer numEntrada = servicio.eliminarEntradasPorComprador(nombreComprador);
+		return ResponseEntity.ok(numEntrada);
+	}
 	
 	
 	
