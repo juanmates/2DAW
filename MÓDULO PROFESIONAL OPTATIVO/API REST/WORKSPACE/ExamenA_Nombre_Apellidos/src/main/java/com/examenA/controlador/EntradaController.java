@@ -1,6 +1,8 @@
 package com.examenA.controlador;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -77,7 +79,29 @@ public class EntradaController {
 		return ResponseEntity.ok(numEntrada);
 	}
 	
+	@PatchMapping("/{id}/modificarEntrada/{pelicula}/{horario}")
+	public ResponseEntity<Entrada> modificarEntrada(@PathVariable Long id, @PathVariable String pelicula, @PathVariable String horario) {
+		Entrada entrada = servicio.modificarEntrada(id, pelicula, horario);
+		if(entrada == null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok(entrada);
+	}
 	
+	@GetMapping("/mapaClientes")
+	public ResponseEntity<Map<String, Integer>> obtenerMapaClientes() {
+		Map<String, Integer> mapa = servicio.obtenerMapaClientes();
+		return ResponseEntity.ok(mapa);
+	}
+	
+	@GetMapping("/masCara")
+	public ResponseEntity<Entrada> obtenerEntradaMasCara() {
+		Entrada entrada = servicio.obtenerEntradaMasCara();
+		if(entrada == null) {
+			return ResponseEntity.notFound().build();
+		}
+	return ResponseEntity.ok(entrada);
+	}
 	
 	
 	
