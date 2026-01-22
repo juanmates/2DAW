@@ -1,11 +1,527 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profesionales de la Formación - Autoescuelas</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- CSS personalizado -->
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)), url('https://images.unsplash.com/photo-1542228262-3d663b306a53?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0 !important;
+            padding: 20px;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+        
+        .search-item, .offer-item, .comparator-item {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .read-more {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+            color: #2980b9;
+        }
+        
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        
+        .guiding-line {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-car-front-fill me-2"></i>AutoFormación
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#busquedas">Búsquedas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ofertas">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comparador">Comparador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero / Inicio -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Instructores profesionales</h1>
+            <p class="lead mb-4">Aprende con los mejores profesionistas del sector</p>
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8">
+                    <div class="card bg-white text-dark">
+                        <div class="card-header text-center">
+                            <i class="bi bi-book me-2"></i>LECTURA: INSTRUMENTO GRÁFICO
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h3 class="card-title mb-3">¿Quieres aprender?</h3>
+                            <p class="card-text mb-4">Descubre nuestras herramientas gráficas y metodologías innovadoras para el aprendizaje efectivo en la conducción y seguridad vial.</p>
+                            <a href="#" class="btn btn-primary">Explorar herramientas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Búsquedas recientes -->
+    <section id="busquedas" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">BÚSQUEDAS RECIENTES</h2>
+            <p class="text-center mb-5 guiding-line">Línea guía para dar un nuevo rendimiento</p>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="search-item">
+                        <h4 class="mb-3">Automovilismo en Madrid Centro</h4>
+                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="search-item">
+                        <h4 class="mb-3">Automovilismo en Barcelona</h4>
+                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="search-item">
+                        <h4 class="mb-3">Automovilismo en Valencia</h4>
+                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
+                        <a href="#" class="read-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="search-item">
+                        <h4 class="mb-3">Automovilismo en Sevilla</h4>
+                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
+                        <a href="#" class="read-more">Discover more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grandes ofertas -->
+    <section id="ofertas" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">GRANDES OFERTAS</h2>
+            <p class="text-center mb-5 guiding-line">Línea guía para dar un nuevo rendimiento</p>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="offer-item">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <h4 class="mb-3">Curso intensivo anual 3º</h4>
+                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="offer-item">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-camera-reels"></i>
+                        </div>
+                        <h4 class="mb-3">Producción audiovisual</h4>
+                        <p>Como crear una película de cine y producir vídeos de alta calidad.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="offer-item">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-card-checklist"></i>
+                        </div>
+                        <h4 class="mb-3">Renovación de carnet</h4>
+                        <p>Como hacer una renovación de tu carnet y mejorar tu vida cotidiana.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="offer-item">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h4 class="mb-3">Cursos teóricos online</h4>
+                        <p>Como aprender técnicas de cocina y preparar tus platos.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparador de autoescuelas -->
+    <section id="comparador" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Tu mejor comparador de autoescuelas</h2>
+            <p class="text-center mb-5">Busca tu mejor comparador de autobuses</p>
+            
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="comparator-item">
+                        <h3 class="mb-4">Completa y fija</h3>
+                        <p>Como supervisar el nivel y objetivos académicos de tus estudiantes, asegurándote de que estén en la mejor situación posible.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="comparator-item">
+                        <h3 class="mb-4">Más de 1000 autoescuelas</h3>
+                        <p class="guiding-line">Línea guía para dar un apoyo personalizado a tus estudiantes, ayudándolos a alcanzar sus metas.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="comparator-item">
+                        <h3 class="mb-4">Seis años de calidad</h3>
+                        <p class="guiding-line">Línea guía para dar un apoyo personalizado a tus estudiantes, ayudándoles a alcanzar sus metas.</p>
+                        <a href="#" class="read-more">Discover more</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <div class="card mx-auto" style="max-width: 600px;">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-3">¿Listo para comparar?</h4>
+                        <p class="card-text mb-4">Utiliza nuestro comparador inteligente para encontrar la autoescuela perfecta según tus necesidades y ubicación.</p>
+                        <button id="compararBtn" class="btn btn-primary">Comparar autoescuelas ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Contacto</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                                </div>
+                            </form>
+                            
+                            <div class="mt-4 text-center">
+                                <p class="mb-2">O contáctanos directamente:</p>
+                                <p class="mb-1"><i class="bi bi-telephone me-2"></i>+34 900 123 456</p>
+                                <p><i class="bi bi-envelope me-2"></i>info@autoformacion.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-2">© 2023 AutoFormación. Todos los derechos reservados.</p>
+            <p class="mb-0">Aprende con los mejores profesionistas del sector</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script>
+        $(document).ready(function() {
+            // Navegación suave
+            $('a.nav-link').on('click', function(e) {
+                if (this.hash !== '') {
+                    e.preventDefault();
+                    const hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 70
+                    }, 800);
+                }
+            });
+            
+            // Animación para elementos al hacer scroll
+            function animateOnScroll() {
+                $('.card').each(function() {
+                    const elementTop = $(this).offset().top;
+                    const elementBottom = elementTop + $(this).outerHeight();
+                    const viewportTop = $(window).scrollTop();
+                    const viewportBottom = viewportTop + $(window).height();
+                    
+                    if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                        $(this).addClass('animated');
+                    }
+                });
+            }
+            
+            // Llamar a la función al cargar y al hacer scroll
+            $(window).on('scroll', animateOnScroll);
+            animateOnScroll();
+            
+            // Manejo del formulario de contacto
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                // Aquí normalmente enviaríamos los datos al servidor
+                // Por ahora, solo mostramos un mensaje
+                const nombre = $('#nombre').val();
+                const email = $('#email').val();
+                
+                // Crear mensaje de éxito
+                const successMsg = `
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle me-2"></i>
+                        <strong>¡Mensaje enviado con éxito!</strong> Gracias ${nombre}, te contactaremos en ${email} pronto.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `;
+                
+                // Insertar mensaje antes del formulario
+                $(this).before(successMsg);
+                
+                // Resetear formulario
+                $(this).trigger('reset');
+                
+                // Desplazarse al principio del formulario
+                $('html, body').animate({
+                    scrollTop: $('#contacto').offset().top - 100
+                }, 500);
+            });
+            
+            // Botón de comparar
+            $('#compararBtn').on('click', function() {
+                // Simular proceso de comparación
+                $(this).html('<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Comparando...');
+                
+                setTimeout(() => {
+                    // Crear modal con resultados simulados
+                    const modalHTML = `
+                        <div class="modal fade" id="comparadorModal" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Resultados del comparador</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Hemos encontrado <span class="highlight">15 autoescuelas</span> que coinciden con tus criterios de búsqueda.</p>
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between">
+                                                <span>Autoescuela Madrid Centro</span>
+                                                <span class="badge bg-primary">4.8 ★</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between">
+                                                <span>Autoescuela Barcelona Drive</span>
+                                                <span class="badge bg-primary">4.7 ★</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between">
+                                                <span>Autoescuela Valencia Vial</span>
+                                                <span class="badge bg-primary">4.6 ★</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between">
+                                                <span>Autoescuela Sevilla Motor</span>
+                                                <span class="badge bg-primary">4.5 ★</span>
+                                            </li>
+                                        </ul>
+                                        <p class="mt-3">Para ver todos los resultados y comparar precios, regístrate en nuestra plataforma.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Registrarse para ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Añadir modal al DOM
+                    $('body').append(modalHTML);
+                    
+                    // Mostrar modal
+                    const comparadorModal = new bootstrap.Modal(document.getElementById('comparadorModal'));
+                    comparadorModal.show();
+                    
+                    // Restaurar texto del botón
+                    $('#compararBtn').html('Comparar autoescuelas ahora');
+                    
+                    // Eliminar modal del DOM cuando se cierre
+                    $('#comparadorModal').on('hidden.bs.modal', function() {
+                        $(this).remove();
+                    });
+                }, 1500);
+            });
+            
+            // Efecto para enlaces "Leer más"
+            $('.read-more').on('mouseenter', function() {
+                $(this).css('transform', 'translateX(5px)');
+            }).on('mouseleave', function() {
+                $(this).css('transform', 'translateX(0)');
+            });
+            
+            // Actualizar año en el footer
+            const currentYear = new Date().getFullYear();
+            $('footer p:first').html(`© ${currentYear} AutoFormación. Todos los derechos reservados.`);
+        });
+    </script>
 </body>
 </html>
