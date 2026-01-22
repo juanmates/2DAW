@@ -1,0 +1,363 @@
+:root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*SECCION CARRUSEL*/
+.section-carrusel {
+    background-color: black;
+    height: 75vh;
+    width: 100%;
+    position: relative;
+}
+
+.carrusel {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+}
+
+.carousel-caption h3 {
+    font-size: 2.5rem;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+}
+
+
+/*SECCION BUSCADOR*/
+.licencias-section {
+    background-color: #3498db/*#f8f9fa*/;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.licencias-contenedor {
+    max-width: 800px;
+    width: 100%;
+}
+
+.licencias-titulo {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.buscador-contenedor {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.buscador-input {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-busqueda {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.input-busqueda:focus {
+    outline: none;
+    border-color: #f07505;
+}
+
+.btn-buscar {
+    background-color: #f07505;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px;
+}
+
+/*SECCION AUTOESCUELAS OFERTAS*/
+.destacadas-section {
+    background-color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #3498db;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.lead {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.divider-line {
+    height: 3px;
+    width: 60px;
+    background-color: #3498db;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.oferta-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border: 1px solid #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+.oferta-card:hover {
+    transform: translateY(-8px);
+}
+
+.icon-star {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f07505;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.star-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-read-more {
+    background-color: #3498db !important;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+/*SECCION COMPARADOR DE AUTOESCUELAS*/
+.letsdrive-section {
+    background-color: #3498dba1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #f07505;
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.lead {
+    color: #474a4b;
+    font-size: 1.2rem;
+}
+
+.divider-line {
+    height: 3px;
+    width: 80px;
+    background-color: #3498db;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Cards Styling */
+.feature-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(52, 152, 219, 0.15);
+    border-color: #3498db;
+    background: #ffffff;
+}
+
+.feature-card:hover .icon-container {
+    transform: scale(1.1);
+    background-color: #3498db;
+}
+
+.feature-card:hover .icon-text {
+    transform: scale(1.1);
+}
+
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #ecf0f1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.icon-text {
+    font-size: 2.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.card-bottom-line {
+    height: 2px;
+    width: 50px;
+    background-color: #3498db;
+    margin: 1.5rem auto 0;
+    border-radius: 1px;
+    transition: width 0.3s ease;
+}
+
+.feature-card:hover .card-bottom-line {
+    width: 100px;
+    background-color: #2980b9;
+}
+
+
+
+/*FOOTER*/
+.footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-descripcion h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer ul li a {
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 0;
+}
+
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer .list-inline-item a {
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer .text-muted {
+    color: #adb5bd !important;
+}

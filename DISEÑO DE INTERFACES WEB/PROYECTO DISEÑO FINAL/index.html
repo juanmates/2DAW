@@ -9,151 +9,15 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- CSS personalizado -->
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .hero-section {
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)), url('https://images.unsplash.com/photo-1542228262-3d663b306a53?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .section-title {
-            position: relative;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            color: var(--primary-color);
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-        
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .card-header {
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 10px 10px 0 0 !important;
-            padding: 20px;
-            font-weight: 600;
-        }
-        
-        .btn-primary {
-            background-color: var(--secondary-color);
-            border: none;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: 600;
-        }
-        
-        .btn-primary:hover {
-            background-color: #2980b9;
-        }
-        
-        .search-item, .offer-item, .comparator-item {
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 15px;
-            margin-bottom: 25px;
-        }
-        
-        .contact-section {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 60px 0;
-        }
-        
-        .footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        
-        .read-more {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        
-        .read-more:hover {
-            text-decoration: underline;
-            color: #2980b9;
-        }
-        
-        .icon-wrapper {
-            width: 60px;
-            height: 60px;
-            background-color: var(--secondary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            color: white;
-            font-size: 24px;
-        }
-        
-        .highlight {
-            color: var(--accent-color);
-            font-weight: 700;
-        }
-        
-        .guiding-line {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-bottom: 15px;
-            border-left: 3px solid var(--secondary-color);
-            padding-left: 10px;
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--primary-color) !important;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-responsive.css">
 </head>
 <body>
     <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="bi bi-car-front-fill me-2"></i>AutoFormación
+                <img src="img/LOGO.jpg" alt="" class="img-fluid" style="height: 80px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -180,348 +44,379 @@
         </div>
     </nav>
 
-    <!-- Sección Hero / Inicio -->
-    <section id="inicio" class="hero-section">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-4">Instructores profesionales</h1>
-            <p class="lead mb-4">Aprende con los mejores profesionistas del sector</p>
-            
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-8">
-                    <div class="card bg-white text-dark">
-                        <div class="card-header text-center">
-                            <i class="bi bi-book me-2"></i>LECTURA: INSTRUMENTO GRÁFICO
-                        </div>
-                        <div class="card-body p-4 text-center">
-                            <h3 class="card-title mb-3">¿Quieres aprender?</h3>
-                            <p class="card-text mb-4">Descubre nuestras herramientas gráficas y metodologías innovadoras para el aprendizaje efectivo en la conducción y seguridad vial.</p>
-                            <a href="#" class="btn btn-primary">Explorar herramientas</a>
-                        </div>
-                    </div>
+    <!-- Sección Carrusel -->
+<section id="inicio" class="section-carrusel">
+    <div id="carouselExampleCaptions" class="carousel slide h-100">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <img src="https://images.unsplash.com/photo-1609465397944-be1ce3ebda61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkYXNoYm9hcmQlMjBkcml2aW5nfGVufDF8fHx8MTc2Mjc4NzkyM3ww&ixlib=rb-4.1.0&q=80&w=1080" class="d-block w-100 h-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 text-start">
+                    <h3 class="display-4 fw-bold mb-3">Consigue tu carnet</h3>
+                    <p class="mb-4">El camino más fácil para obtener tu licencia de conducir</p>
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <img src="https://images.unsplash.com/photo-1630406144797-821be1f35d75?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 h-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 text-start">
+                    <h3 class="display-4 fw-bold mb-3">Instructores profesionales</h3>
+                    <p class="mb-4">Aprende con los mejores profesionales del sector.</p>
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 h-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 text-start">
+                    <h3 class="display-4 fw-bold mb-3">Encuentra tu autoescuela ideal</h3>
+                    <p class="mb-4">Compara precios y opiniones de las mejores autoescuelas.</p>
                 </div>
             </div>
         </div>
-    </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
 
-    <!-- Búsquedas recientes -->
-    <section id="busquedas" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">BÚSQUEDAS RECIENTES</h2>
-            <p class="text-center mb-5 guiding-line">Línea guía para dar un nuevo rendimiento</p>
-            
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="search-item">
-                        <h4 class="mb-3">Automovilismo en Madrid Centro</h4>
-                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
-                        <a href="#" class="read-more">Leer más</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="search-item">
-                        <h4 class="mb-3">Automovilismo en Barcelona</h4>
-                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
-                        <a href="#" class="read-more">Read more</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="search-item">
-                        <h4 class="mb-3">Automovilismo en Valencia</h4>
-                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
-                        <a href="#" class="read-more">Learn more</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="search-item">
-                        <h4 class="mb-3">Automovilismo en Sevilla</h4>
-                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
-                        <a href="#" class="read-more">Discover more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Grandes ofertas -->
-    <section id="ofertas" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center">GRANDES OFERTAS</h2>
-            <p class="text-center mb-5 guiding-line">Línea guía para dar un nuevo rendimiento</p>
+    <!-- BUSCADOR -->
+<section id="licencias" class="licencias-section">
+    <div class="licencias-contenedor">
+        <h2 class="licencias-titulo">LICENCIAS DISPONIBLES</h2>
+        
+        <div class="buscador-contenedor">
+            <div class="buscador-input">
+                <input type="text" placeholder="Buscar autoescuela..." class="input-busqueda">
+                <button class="btn-buscar">Buscar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Grandes ofertas -->
+    <section class="autoescuelas-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">LUGARES</h2>
+        
+        <div class="row g-4">
+            <!-- Card 1 - Madrid -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         class="card-img-top" 
+                         alt="Autoescuela Madrid Centro"
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold text-primary">Autoescuela en Sevilla centro</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum...
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto align-self-start">Buscar</a>
+                    </div>
+                </div>
+            </div>
             
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="offer-item">
-                        <div class="icon-wrapper">
-                            <i class="bi bi-calendar-event"></i>
-                        </div>
-                        <h4 class="mb-3">Curso intensivo anual 3º</h4>
-                        <p>Como usar una bicicleta de reciclaje y reducir el impacto ambiental.</p>
-                        <a href="#" class="read-more">Leer más</a>
+            <!-- Card 2 - Barcelona -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         class="card-img-top" 
+                         alt="Autoescuela Barcelona"
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold text-primary">Autoescuelas en el Aljarafe</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum...
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto align-self-start">Buscar</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="offer-item">
-                        <div class="icon-wrapper">
-                            <i class="bi bi-camera-reels"></i>
-                        </div>
-                        <h4 class="mb-3">Producción audiovisual</h4>
-                        <p>Como crear una película de cine y producir vídeos de alta calidad.</p>
-                        <a href="#" class="read-more">Read more</a>
+            </div>
+            
+            <!-- Card 3 - Valencia -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         class="card-img-top" 
+                         alt="Autoescuela Valencia"
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold text-primary">Autoescuelas en el Cerro del Águila</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum...
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto align-self-start">Buscar</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="offer-item">
-                        <div class="icon-wrapper">
-                            <i class="bi bi-card-checklist"></i>
-                        </div>
-                        <h4 class="mb-3">Renovación de carnet</h4>
-                        <p>Como hacer una renovación de tu carnet y mejorar tu vida cotidiana.</p>
-                        <a href="#" class="read-more">Read more</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="offer-item">
-                        <div class="icon-wrapper">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-                        <h4 class="mb-3">Cursos teóricos online</h4>
-                        <p>Como aprender técnicas de cocina y preparar tus platos.</p>
-                        <a href="#" class="read-more">Read more</a>
+            </div>
+            
+            <!-- Card 4 - Sevilla -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         class="card-img-top" 
+                         alt="Autoescuela Sevilla"
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold text-primary">Autoescuelas en Pino Montano</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum...
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto align-self-start">Buscar</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+    <!-- Seccion Ofertas-->
+     <section class="destacadas-section py-5">
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold  mb-2" style="color: #3498db;">DESTACADAS</h1>
+            <h2 class="h3 mb-4">GRANDES OFERTAS</h2>
+            <p class="lead mb-4">Encuentra aquí las mejores ofertas disponibles</p>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card oferta-card h-100 border-0">
+                    <div class="card-body p-4">
+                        <div class="icon-star mb-3">
+                            <span class="star-icon">⭐</span>
+                        </div>
+                        <h3 class="card-title h5 fw-bold mb-3">Curso intensivo carnet B</h3>
+                        <p class="card-text mb-4">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum hypercare ac est et pharetra pharetra. Veli eleemngue rhoncus amet Veli eleemngue rhoncus cursus rhoncus.
+                        </p>
+                        <a href="#" class="btn btn-read-more">Leer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card oferta-card h-100 border-0">
+                    <div class="card-body p-4">
+                        <div class="icon-star mb-3">
+                            <span class="star-icon">⭐</span>
+                        </div>
+                        <h3 class="card-title h5 fw-bold mb-3">Prácticas adicionales</h3>
+                        <p class="card-text mb-4">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum hypercare ac est et pharetra pharetra. Veli eleemngue rhoncus amet Veli eleemngue rhoncus cursus rhoncus.
+                        </p>
+                        <a href="#" class="btn btn-read-more">Leer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card oferta-card h-100 border-0">
+                    <div class="card-body p-4">
+                        <div class="icon-star mb-3">
+                            <span class="star-icon">⭐</span>
+                        </div>
+                        <h3 class="card-title h5 fw-bold mb-3">Renovación de carnet</h3>
+                        <p class="card-text mb-4">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum hypercare ac est et pharetra pharetra. Veli eleemngue rhoncus amet Veli eleemngue rhoncus cursus rhoncus.
+                        </p>
+                        <a href="#" class="btn btn-read-more">Leer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card oferta-card h-100 border-0">
+                    <div class="card-body p-4">
+                        <div class="icon-star mb-3">
+                            <span class="star-icon">⭐</span>
+                        </div>
+                        <h3 class="card-title h5 fw-bold mb-3">Curso teórico online</h3>
+                        <p class="card-text mb-4">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum hypercare ac est et pharetra pharetra. Veli eleemngue rhoncus amet Veli eleemngue rhoncus cursus rhoncus.
+                        </p>
+                        <a href="#" class="btn  btn-read-more">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Comparador de autoescuelas -->
-    <section id="comparador" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Tu mejor comparador de autoescuelas</h2>
-            <p class="text-center mb-5">Busca tu mejor comparador de autobuses</p>
-            
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="comparator-item">
-                        <h3 class="mb-4">Completa y fija</h3>
-                        <p>Como supervisar el nivel y objetivos académicos de tus estudiantes, asegurándote de que estén en la mejor situación posible.</p>
-                        <a href="#" class="read-more">Leer más</a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="comparator-item">
-                        <h3 class="mb-4">Más de 1000 autoescuelas</h3>
-                        <p class="guiding-line">Línea guía para dar un apoyo personalizado a tus estudiantes, ayudándolos a alcanzar sus metas.</p>
-                        <a href="#" class="read-more">Read more</a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="comparator-item">
-                        <h3 class="mb-4">Seis años de calidad</h3>
-                        <p class="guiding-line">Línea guía para dar un apoyo personalizado a tus estudiantes, ayudándoles a alcanzar sus metas.</p>
-                        <a href="#" class="read-more">Discover more</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <div class="card mx-auto" style="max-width: 600px;">
-                    <div class="card-body p-4">
-                        <h4 class="card-title mb-3">¿Listo para comparar?</h4>
-                        <p class="card-text mb-4">Utiliza nuestro comparador inteligente para encontrar la autoescuela perfecta según tus necesidades y ubicación.</p>
-                        <button id="compararBtn" class="btn btn-primary">Comparar autoescuelas ahora</button>
-                    </div>
-                </div>
-            </div>
+    <section class="letsdrive-section py-5">
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold mb-3 text-white">LetsDrive</h1>
+            <h2 class="h3 mb-3">Tu mejor comparador de autoescuelas</h2>
+            <p class="lead mb-4">Encuentra la autoescuela perfecta para ti</p>
+            <div class="divider-line"></div>
         </div>
-    </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Contacto</h2>
-            
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <form id="contactForm">
-                                <div class="mb-3">
-                                    <label for="nombre" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="nombre" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="mensaje" class="form-label">Mensaje</label>
-                                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-                                </div>
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                                </div>
-                            </form>
-                            
-                            <div class="mt-4 text-center">
-                                <p class="mb-2">O contáctanos directamente:</p>
-                                <p class="mb-1"><i class="bi bi-telephone me-2"></i>+34 900 123 456</p>
-                                <p><i class="bi bi-envelope me-2"></i>info@autoformacion.com</p>
-                            </div>
+        <!-- Cards -->
+        <div class="row g-4">
+            <!-- Card 1 - Compara y elige -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-container mb-4">
+                            <span class="icon-text">📊</span>
                         </div>
+                        <h3 class="card-title h4 fw-bold mb-3">Compara y elige</h3>
+                        <p class="card-text mb-0">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum hypercare ac est et pharetra pharetra. Veli eleemque rhoncus cursus rhoncus.
+                        </p>
+                        <div class="card-bottom-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 - Más de 500 autoescuelas -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-container mb-4">
+                            <span class="icon-text">🏢</span>
+                        </div>
+                        <h3 class="card-title h4 fw-bold mb-3">Más de 500 autoescuelas</h3>
+                        <p class="card-text mb-0">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum hypercare ac est et pharetra pharetra. Veli eleemque rhoncus cursus rhoncus.
+                        </p>
+                        <div class="card-bottom-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 - Garantía de calidad -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-container mb-4">
+                            <span class="icon-text">✅</span>
+                        </div>
+                        <h3 class="card-title h4 fw-bold mb-3">Garantía de calidad</h3>
+                        <p class="card-text mb-0">
+                            Lorem ipsum dolor sit amet et adipiscing consectetur. Dis cursus condimentum hypercare ac est et pharetra pharetra. Veli eleemque rhoncus cursus rhoncus.
+                        </p>
+                        <div class="card-bottom-line"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="mb-2">© 2023 AutoFormación. Todos los derechos reservados.</p>
-            <p class="mb-0">Aprende con los mejores profesionistas del sector</p>
+    <footer class="footer bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <!-- Logo y descripción -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-descripcion mb-3">
+                    <h2 class="text-warning fw-bold">LetsDrive</h2>
+                </div>
+                <p class="text-muted">
+                    Tu comparador de autoescuelas líder en Sevilla. Encuentra la mejor autoescuela, compara precios y obtén tu carnet de conducir de forma rápida y segura.
+                </p>
+                <div class="social-icons mt-4">
+                    <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Enlaces rápidos -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="text-warning mb-4">Enlaces Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#inicio" class="text-light text-decoration-none">Inicio</a></li>
+                    <li class="mb-2"><a href="#licencias" class="text-light text-decoration-none">Licencias</a></li>
+                    <li class="mb-2"><a href="#autoescuelas" class="text-light text-decoration-none">Autoescuelas</a></li>
+                    <li class="mb-2"><a href="#ofertas" class="text-light text-decoration-none">Ofertas</a></li>
+                    <li class="mb-2"><a href="#contacto" class="text-light text-decoration-none">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Tipos de licencias -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-warning mb-4">Licencias</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-light text-decoration-none">Carnet A (Moto)</a></li>
+                    <li class="mb-2"><a href="#" class="text-light text-decoration-none">Carnet B (Coche)</a></li>
+                    <li class="mb-2"><a href="#" class="text-light text-decoration-none">Carnet C (Camión)</a></li>
+                    <li class="mb-2"><a href="#" class="text-light text-decoration-none">Carnet D (Autobús)</a></li>
+                    <li class="mb-2"><a href="#" class="text-light text-decoration-none">Renovaciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-warning mb-4">Contacto</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <i class="bi bi-geo-alt text-warning me-2"></i>
+                        <span class="text-muted">Calle Autoescuela, 123, Madrid</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-telephone text-warning me-2"></i>
+                        <span class="text-muted">+34 910 123 456</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-envelope text-warning me-2"></i>
+                        <span class="text-muted">info@letsdrive.com</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-clock text-warning me-2"></i>
+                        <span class="text-muted">Lun-Vie: 9:00-20:00</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </footer>
+
+        <hr class="bg-secondary my-4">
+
+        <!-- Copyright y enlaces legales -->
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="text-muted mb-0">&copy; 2024 LetsDrive. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Política de privacidad</a></li>
+                    <li class="list-inline-item mx-2">|</li>
+                    <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Términos y condiciones</a></li>
+                    <li class="list-inline-item mx-2">|</li>
+                    <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Aviso legal</a></li>
+                    <li class="list-inline-item mx-2">|</li>
+                    <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- Bootstrap 5 JS Bundle con Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- JavaScript personalizado -->
-    <script>
-        $(document).ready(function() {
-            // Navegación suave
-            $('a.nav-link').on('click', function(e) {
-                if (this.hash !== '') {
-                    e.preventDefault();
-                    const hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 70
-                    }, 800);
-                }
-            });
-            
-            // Animación para elementos al hacer scroll
-            function animateOnScroll() {
-                $('.card').each(function() {
-                    const elementTop = $(this).offset().top;
-                    const elementBottom = elementTop + $(this).outerHeight();
-                    const viewportTop = $(window).scrollTop();
-                    const viewportBottom = viewportTop + $(window).height();
-                    
-                    if (elementBottom > viewportTop && elementTop < viewportBottom) {
-                        $(this).addClass('animated');
-                    }
-                });
-            }
-            
-            // Llamar a la función al cargar y al hacer scroll
-            $(window).on('scroll', animateOnScroll);
-            animateOnScroll();
-            
-            // Manejo del formulario de contacto
-            $('#contactForm').on('submit', function(e) {
-                e.preventDefault();
-                
-                // Aquí normalmente enviaríamos los datos al servidor
-                // Por ahora, solo mostramos un mensaje
-                const nombre = $('#nombre').val();
-                const email = $('#email').val();
-                
-                // Crear mensaje de éxito
-                const successMsg = `
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <i class="bi bi-check-circle me-2"></i>
-                        <strong>¡Mensaje enviado con éxito!</strong> Gracias ${nombre}, te contactaremos en ${email} pronto.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                `;
-                
-                // Insertar mensaje antes del formulario
-                $(this).before(successMsg);
-                
-                // Resetear formulario
-                $(this).trigger('reset');
-                
-                // Desplazarse al principio del formulario
-                $('html, body').animate({
-                    scrollTop: $('#contacto').offset().top - 100
-                }, 500);
-            });
-            
-            // Botón de comparar
-            $('#compararBtn').on('click', function() {
-                // Simular proceso de comparación
-                $(this).html('<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Comparando...');
-                
-                setTimeout(() => {
-                    // Crear modal con resultados simulados
-                    const modalHTML = `
-                        <div class="modal fade" id="comparadorModal" tabindex="-1">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Resultados del comparador</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Hemos encontrado <span class="highlight">15 autoescuelas</span> que coinciden con tus criterios de búsqueda.</p>
-                                        <ul class="list-group">
-                                            <li class="list-group-item d-flex justify-content-between">
-                                                <span>Autoescuela Madrid Centro</span>
-                                                <span class="badge bg-primary">4.8 ★</span>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between">
-                                                <span>Autoescuela Barcelona Drive</span>
-                                                <span class="badge bg-primary">4.7 ★</span>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between">
-                                                <span>Autoescuela Valencia Vial</span>
-                                                <span class="badge bg-primary">4.6 ★</span>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between">
-                                                <span>Autoescuela Sevilla Motor</span>
-                                                <span class="badge bg-primary">4.5 ★</span>
-                                            </li>
-                                        </ul>
-                                        <p class="mt-3">Para ver todos los resultados y comparar precios, regístrate en nuestra plataforma.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary">Registrarse para ver más</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    
-                    // Añadir modal al DOM
-                    $('body').append(modalHTML);
-                    
-                    // Mostrar modal
-                    const comparadorModal = new bootstrap.Modal(document.getElementById('comparadorModal'));
-                    comparadorModal.show();
-                    
-                    // Restaurar texto del botón
-                    $('#compararBtn').html('Comparar autoescuelas ahora');
-                    
-                    // Eliminar modal del DOM cuando se cierre
-                    $('#comparadorModal').on('hidden.bs.modal', function() {
-                        $(this).remove();
-                    });
-                }, 1500);
-            });
-            
-            // Efecto para enlaces "Leer más"
-            $('.read-more').on('mouseenter', function() {
-                $(this).css('transform', 'translateX(5px)');
-            }).on('mouseleave', function() {
-                $(this).css('transform', 'translateX(0)');
-            });
-            
-            // Actualizar año en el footer
-            const currentYear = new Date().getFullYear();
-            $('footer p:first').html(`© ${currentYear} AutoFormación. Todos los derechos reservados.`);
-        });
-    </script>
+    
 </body>
 </html>

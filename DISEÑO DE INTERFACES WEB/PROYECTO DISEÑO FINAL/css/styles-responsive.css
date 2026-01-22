@@ -1,0 +1,190 @@
+/*  RESPONSIVE  */
+@media (max-width: 992px) {
+    .carousel-caption h3 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1.25rem;
+    }
+    .row {
+        justify-content: center;
+    }
+    
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 48%;
+    }
+    .carousel-caption h3 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 768px) {
+    .section-carrusel {
+        height: 50vh;
+    }
+    
+    .carousel-caption {
+        padding: 1rem;
+        background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .licencias-section {
+        padding: 40px 15px;
+    }
+    
+    .licencias-titulo {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .buscador-input {
+        flex-direction: column;
+    }
+    
+    .btn-buscar {
+    width: 100%;
+        padding: 15px;
+    }
+     h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .oferta-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .btn-read-more {
+        width: 100%;
+        text-align: center;
+    }
+        h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .feature-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .icon-container {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .icon-text {
+        font-size: 2rem;
+    }
+    .footer {
+        text-align: center;
+    }
+    
+    .footer-descripcion h2 {
+        font-size: 1.8rem;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .footer .list-inline-item {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .footer .list-inline-item.mx-2 {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .destacadas-section {
+        padding: 3rem 1rem;
+    }
+    
+    .oferta-card {
+        padding: 1.5rem;
+    }
+    
+    .icon-star {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .star-icon {
+        font-size: 1.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .letsdrive-section {
+        padding: 3rem 1rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+        .footer {
+        padding: 3rem 1rem !important;
+    }
+    
+    .footer-descripcion h2 {
+        font-size: 1.5rem;
+    }
+    
+    .footer h5 {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-caption h3 {
+        font-size: 1.25rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
