@@ -25,6 +25,46 @@ public class Reserva {
 	@ManyToOne
 	@JoinColumn(name = "id_usuario")
 	private Usuario usuario_reservas;
-	
+
+	public Reserva(Long id_reserva, LocalDate fecha_reserva, Usuario usuario_reservas) {
+		super();
+		this.id_reserva = id_reserva;
+		this.fecha_reserva = fecha_reserva;
+		this.usuario_reservas = usuario_reservas;
+	}
+
+	public Reserva() {
+		super();
+	}
+
+	public Long getId_reserva() {
+		return id_reserva;
+	}
+
+	public void setId_reserva(Long id_reserva) {
+		this.id_reserva = id_reserva;
+	}
+
+	public LocalDate getFecha_reserva() {
+		return fecha_reserva;
+	}
+
+	public void setFecha_reserva(LocalDate fecha_reserva) {
+		this.fecha_reserva = fecha_reserva;
+	}
+
+	public Usuario getUsuario_reservas() {
+		return usuario_reservas;
+	}
+
+	public void setUsuario_reservas(Usuario usuario_reservas) {
+		this.usuario_reservas = usuario_reservas;
+	}
+
+	@Override
+	public String toString() {
+		return "Reserva [id_reserva=" + id_reserva + ", fecha_reserva=" + fecha_reserva + ", usuario_reservas="
+				+ usuario_reservas + "]";
+	}
 	
 }

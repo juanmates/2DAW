@@ -36,7 +36,90 @@ public class Autoescuela {
 	private List<Vehiculo> vehiculos;
 	
 	@OneToMany(mappedBy = "autoescuela_reservas")
-	private List<Vehiculo> resenyas;
+	private List<Resenya> resenyas;
+	
+	@OneToMany(mappedBy = "autoescuela_tarifas")
+	private List<Tarifa> tarifas;
+
+	public Autoescuela(Long id, String nombre, String cif, Direccion direccion, List<Vehiculo> vehiculos,
+			List<Resenya> resenyas, List<Tarifa> tarifas) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.cif = cif;
+		this.direccion = direccion;
+		this.vehiculos = vehiculos;
+		this.resenyas = resenyas;
+		this.tarifas = tarifas;
+	}
+
+	public Autoescuela() {
+		super();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getCif() {
+		return cif;
+	}
+
+	public void setCif(String cif) {
+		this.cif = cif;
+	}
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+
+	public List<Vehiculo> getVehiculos() {
+		return vehiculos;
+	}
+
+	public void setVehiculos(List<Vehiculo> vehiculos) {
+		this.vehiculos = vehiculos;
+	}
+
+	public List<Resenya> getResenyas() {
+		return resenyas;
+	}
+
+	public void setResenyas(List<Resenya> resenyas) {
+		this.resenyas = resenyas;
+	}
+
+	public List<Tarifa> getTarifas() {
+		return tarifas;
+	}
+
+	public void setTarifas(List<Tarifa> tarifas) {
+		this.tarifas = tarifas;
+	}
+
+	@Override
+	public String toString() {
+		return "Autoescuela [id=" + id + ", nombre=" + nombre + ", cif=" + cif + ", direccion=" + direccion
+				+ ", vehiculos=" + vehiculos + ", resenyas=" + resenyas + ", tarifas=" + tarifas + "]";
+	}
+	
+	
 	
 
 }
