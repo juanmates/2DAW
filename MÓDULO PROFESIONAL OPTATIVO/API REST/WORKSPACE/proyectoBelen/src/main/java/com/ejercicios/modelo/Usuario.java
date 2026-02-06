@@ -31,13 +31,13 @@ public class Usuario {
 	private String rol;
 	
 	@OneToMany(mappedBy = "usuario_resenyas")
-	private List<Vehiculo> resenyas;
+	private List<Resenya> resenyas;
 	
 	@OneToMany(mappedBy = "usuario_reservas")
-	private List<Vehiculo> reservas;
+	private List<Reserva> reservas;
 
-	public Usuario(Long id, String email, String contrasenya, String nombre, String rol, List<Vehiculo> resenyas,
-			List<Vehiculo> reservas) {
+	public Usuario(Long id, String email, String contrasenya, String nombre, String rol, List<Resenya> resenyas,
+			List<Reserva> reservas) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -92,19 +92,19 @@ public class Usuario {
 		this.rol = rol;
 	}
 
-	public List<Vehiculo> getResenyas() {
+	public List<Resenya> getResenyas() {
 		return resenyas;
 	}
 
-	public void setResenyas(List<Vehiculo> resenyas) {
+	public void setResenyas(List<Resenya> resenyas) {
 		this.resenyas = resenyas;
 	}
 
-	public List<Vehiculo> getReservas() {
+	public List<Reserva> getReservas() {
 		return reservas;
 	}
 
-	public void setReservas(List<Vehiculo> reservas) {
+	public void setReservas(List<Reserva> reservas) {
 		this.reservas = reservas;
 	}
 

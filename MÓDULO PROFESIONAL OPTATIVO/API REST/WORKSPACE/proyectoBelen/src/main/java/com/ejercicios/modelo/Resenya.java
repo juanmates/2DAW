@@ -18,7 +18,7 @@ public class Resenya {
 	private Long id_resenya;
 	
 	@Column(nullable = false)
-	private Integer puntuacion;
+	private Double puntuacion;
 	
 	@Column
 	private String comentario;
@@ -31,7 +31,7 @@ public class Resenya {
 	@JoinColumn(name = "id_usuario")
 	private Usuario usuario_resenyas;
 
-	public Resenya(Long id_resenya, Integer puntuacion, String comentario, Autoescuela autoescuela_reservas,
+	public Resenya(Long id_resenya, Double puntuacion, String comentario, Autoescuela autoescuela_reservas,
 			Usuario usuario_resenyas) {
 		super();
 		this.id_resenya = id_resenya;
@@ -53,11 +53,11 @@ public class Resenya {
 		this.id_resenya = id_resenya;
 	}
 
-	public Integer getPuntuacion() {
+	public Double getPuntuacion() {
 		return puntuacion;
 	}
 
-	public void setPuntuacion(Integer puntuacion) {
+	public void setPuntuacion(Double puntuacion) {
 		this.puntuacion = puntuacion;
 	}
 
