@@ -90,6 +90,4 @@ public class Vehiculo {
 				+ ", tipo_permiso=" + tipo_permiso + ", autoescuela_vehiculos=" + autoescuela_vehiculos + "]";
 	}
 	
-	
-
 }
