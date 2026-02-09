@@ -20,9 +20,6 @@ public interface UsuarioService {
 	
 	///////////////////////////////////////
 	
-	//Validar Login
-	Boolean validarAcceso(String email, String password);
-	
 	// Buscar usuario por su correo electronico
 	Usuario buscarPorEmail(String email);
 	
