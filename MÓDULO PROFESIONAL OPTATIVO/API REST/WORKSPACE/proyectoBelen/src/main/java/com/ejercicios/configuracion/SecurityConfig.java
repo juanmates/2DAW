@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -25,21 +26,23 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            // 1. PRIMERO: Activamos la configuración de CORS que definimos abajo
-            .cors(Customizer.withDefaults()) // <--- ESTO VA AQUÍ
+            // 1. Desactivar CSRF es vital para que Angular pueda hacer POST
+            .csrf(csrf -> csrf.disable())
             
-            // 2. SEGUNDO: Desactivamos CSRF (necesario para que funcionen los POST desde Angular)
-            .csrf(csrf -> csrf.disable()) 
+            // 2. Habilitar CORS con la configuración por defecto
+            .cors(Customizer.withDefaults())
             
-            // 3. TERCERO: Definimos permisos de rutas
+            // 3. Autorizar las rutas
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/usuarios/**").permitAll() 
+                // Permitir peticiones de "verificación" (OPTIONS) que hace el navegador
+                .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
+                .requestMatchers("/api/usuarios/**").permitAll()
                 .requestMatchers("/api/autoescuelas/**").permitAll()
                 .anyRequest().authenticated()
             )
             
-            // 4. CUARTO: Tipo de autenticación
-            .httpBasic(Customizer.withDefaults());
+            // 4. Desactivar las sesiones (esto evita que Spring intente guardar "cookies" de seguridad)
+            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         return http.build();
     }

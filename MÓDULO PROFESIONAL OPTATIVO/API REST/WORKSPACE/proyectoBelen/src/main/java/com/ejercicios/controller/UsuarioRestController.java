@@ -1,6 +1,7 @@
 package com.ejercicios.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.ejercicios.modelo.Usuario;
+import com.ejercicios.repositorio.UsuarioRepository;
 import com.ejercicios.servicio.UsuarioService;
 
 @RestController
@@ -17,8 +19,10 @@ public class UsuarioRestController {
 
 	@Autowired
 	private UsuarioService servicio;
+	@Autowired
+	private UsuarioRepository repositorio;
 
-	@PostMapping
+	@PostMapping("/registro")
 	public ResponseEntity<Usuario> crearActualizar(@RequestBody Usuario entidad) {
 		Usuario guardado = servicio.crearActualizarUsuario(entidad);
 		return new ResponseEntity<>(guardado, HttpStatus.CREATED);
@@ -62,5 +66,24 @@ public class UsuarioRestController {
 	public ResponseEntity<String> obtenerNombre(@PathVariable Long id) {
 		String nombre = servicio.obtenerNombreCompleto(id);
 		return ResponseEntity.ok(nombre);
+	}
+	
+	@PostMapping("/login-directo")
+	public ResponseEntity<Usuario> loginDirecto(@RequestBody Usuario datos) {
+	    // 1. Buscas en la base de datos por email
+	    Optional<Usuario> userBD = Optional.of(repositorio.findByEmail(datos.getEmail()));
+
+	    if (userBD.isPresent()) {
+	        // 2. Si existe, compruebas contraseña
+	        if (userBD.get().getContrasenya().equals(datos.getContrasenya())) {
+	            return ResponseEntity.ok(userBD.get()); // Login OK
+	        } else {
+	            return ResponseEntity.status(401).build(); // Contraseña mal
+	        }
+	    } else {
+	        // 3. Si NO existe, devolvemos un objeto vacío (pero código 200 OK)
+	        // Así Angular sabe que tiene que mostrar la pantalla de registro
+	        return ResponseEntity.ok(new Usuario()); 
+	    }
 	}
 }

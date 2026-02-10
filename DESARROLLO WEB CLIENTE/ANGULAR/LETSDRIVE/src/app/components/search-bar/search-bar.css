@@ -1,0 +1,32 @@
+.search-section {
+  background-color: #4b49ff;
+  width: 100%;
+  position: relative;
+}
+
+.bg-primary-custom {
+  background-color: #4b49ff !important;
+}
+
+.search-box {
+  border: none;
+  .form-control {
+    &:focus {
+      background-color: white;
+    }
+  }
+
+  .btn-success {
+    background-color: #78bc61;
+    border: none;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #66a650;
+    }
+  }
+}
+
+.bi-search {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,56 @@
+.autoescuelas-section {
+  background-color: #f8f9fa;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #78bc61;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.auto-card {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+  }
+
+  .card-img-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .badge-price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #78bc61;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
+
+.btn-outline-success {
+  border-color: #78bc61;
+  color: #78bc61;
+
+  &:hover {
+    background-color: #78bc61;
+    border-color: #78bc61;
+  }
+}
