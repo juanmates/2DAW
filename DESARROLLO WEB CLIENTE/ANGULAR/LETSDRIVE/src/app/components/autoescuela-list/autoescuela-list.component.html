@@ -1,81 +1,50 @@
-<section class="autoescuelas-section py-5">
+<section class="autoescuelas-list-section py-5">
   <div class="container">
 
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">POPULARES: BÚSQUEDAS RECIENTES</h2>
-      <div class="title-underline mx-auto"></div>
-    </div>
+    <div class="row bg-white shadow-sm rounded-4 overflow-hidden mb-5 border mx-0">
 
-    <div class="row g-4">
-
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm auto-card">
-          <div class="card-img-container">
-            <img src="assets/img/auto-1.jpg" class="card-img-top" alt="Autoescuela Madrid">
-            <div class="badge-price">Desde 199€</div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Autoescuela Gala</h5>
-            <p class="card-text text-muted small mb-3">
-              <i class="bi bi-geo-alt-fill text-success"></i> Bormujos, Sevilla
-            </p>
-            <div class="d-grid">
-              <button class="btn btn-outline-success rounded-pill btn-sm">Ver detalles</button>
+      <div class="col-md-5 p-0">
+        <div class="image-wrapper">
+          <div id="carouselAuto1" class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active h-100">
+                <img src="assets/img/auto-1.jpg" class="img-fixed" alt="Autoescuela">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="assets/img/auto-2.jpg" class="img-fixed" alt="Instalaciones">
+              </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAuto1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselAuto1" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm auto-card">
-          <div class="card-img-container">
-            <img src="assets/img/auto-2.jpg" class="card-img-top" alt="Autoescuela Barcelona">
-            <div class="badge-price">Desde 250€</div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">TORCAL</h5>
-            <p class="card-text text-muted small mb-3">
-              <i class="bi bi-geo-alt-fill text-success"></i> Triana, Sevilla
-            </p>
-            <div class="d-grid">
-              <button class="btn btn-outline-success rounded-pill btn-sm">Ver detalles</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="col-md-7 p-4 d-flex flex-column justify-content-center">
+        <div class="ps-lg-4">
+          <h3 class="fw-bold mb-1">Autoescuela Montero</h3>
+          <p class="text-muted small mb-3">CIF: B12345678</p>
 
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm auto-card">
-          <div class="card-img-container">
-            <img src="assets/img/auto-3.avif" class="card-img-top" alt="Autoescuela Sevilla">
-            <div class="badge-price">Desde 180€</div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Autoescuela Giralda</h5>
-            <p class="card-text text-muted small mb-3">
-              <i class="bi bi-geo-alt-fill text-success"></i> Bollullos de la Mitación, Sevilla
-            </p>
-            <div class="d-grid">
-              <button class="btn btn-outline-success rounded-pill btn-sm">Ver detalles</button>
-            </div>
-          </div>
-        </div>
-      </div>
+          <p><i class="bi bi-geo-alt text-danger"></i> Calle Mayor 12, Madrid</p>
 
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm auto-card">
-          <div class="card-img-container">
-            <img src="assets/img/auto-4.jpeg" class="card-img-top" alt="Autoescuela Valencia">
-            <div class="badge-price">Desde 210€</div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Autoescuela Molina</h5>
-            <p class="card-text text-muted small mb-3">
-              <i class="bi bi-geo-alt-fill text-success"></i> Nervión, Sevilla
-            </p>
-            <div class="d-grid">
-              <button class="btn btn-outline-success rounded-pill btn-sm">Ver detalles</button>
+          <div class="row mb-4">
+            <div class="col-6">
+              <small class="text-uppercase text-muted d-block">Vehículos</small>
+              <strong>8 disponibles</strong>
             </div>
+            <div class="col-6">
+              <small class="text-uppercase text-muted d-block">Reseñas</small>
+              <strong>4.9 <i class="bi bi-star-fill text-warning"></i></strong>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between border-top pt-3">
+            <h4 class="text-success fw-bold mb-0">249,00 €</h4>
+            <button class="btn btn-success rounded-pill px-4">Ver detalles</button>
           </div>
         </div>
       </div>
