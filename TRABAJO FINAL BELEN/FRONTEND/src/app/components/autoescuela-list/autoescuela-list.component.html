@@ -1,0 +1,106 @@
+<section class="autoescuelas-list-section py-5 bg-light">
+  <div class="container">
+
+    <div class="row bg-white shadow-sm rounded-4 overflow-hidden mb-5 border align-items-start"
+         *ngFor="let auto of autoescuelas">
+
+      <div class="col-md-5 p-0 img-fixed-container">
+        <div class="h-100 bg-dark overflow-hidden">
+          <img src="assets/img/auto-1.jpg" class="img-fixed" alt="{{auto.nombre}}">
+        </div>
+      </div>
+
+      <div class="col-md-7 p-4 p-lg-5">
+        <div class="d-flex justify-content-between align-items-start">
+          <h3 class="fw-bold text-dark">{{ auto.nombre }}</h3>
+          <span class="badge bg-secondary opacity-75">CIF: {{ auto.cif }}</span>
+        </div>
+
+        <p class="text-muted mb-4">
+          <i class="bi bi-geo-alt-fill text-danger me-1"></i>
+          {{ auto.direccion.calle }}, {{ auto.direccion.ciudad }}
+        </p>
+
+        <div class="row mb-4">
+          <div class="col-6 text-center border-end">
+            <h6 class="text-muted small text-uppercase fw-bold" style="font-size: 0.7rem;">Vehículos</h6>
+            <p class="mb-0 fs-5"><strong>{{ auto.vehiculos.length || 0 }}</strong></p>
+          </div>
+          <div class="col-6 text-center">
+            <h6 class="text-muted small text-uppercase fw-bold" style="font-size: 0.7rem;">Valoración</h6>
+            <p class="mb-0 fs-5"><strong>{{ auto.resenyas.length || 0 }}</strong></p>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 border-top pt-4">
+
+          <button class="btn btn-success rounded-pill px-4 fw-bold shadow-sm"
+                  type="button"
+                  (click)="auto.id && togglePestana(auto.id, 'tarifas')">
+            <i class="bi bi-tag-fill me-1"></i>
+            {{ (auto.id && pestanaActiva[auto.id] === 'tarifas') ? 'Cerrar Tarifas' : 'Tarifas' }}
+          </button>
+
+          <button class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm"
+                  type="button"
+                  (click)="auto.id && togglePestana(auto.id, 'vehiculos')">
+            <i class="bi bi-car-front-fill me-1"></i>
+            {{ (auto.id && pestanaActiva[auto.id] === 'vehiculos') ? 'Cerrar Flota' : 'Flota' }}
+          </button>
+
+          <button class="btn btn-outline-dark rounded-pill px-4 fw-bold shadow-sm"
+                  type="button"
+                  (click)="auto.id && togglePestana(auto.id, 'resenyas')">
+            <i class="bi bi-chat-left-text-fill me-1"></i>
+            {{ (auto.id && pestanaActiva[auto.id] === 'resenyas') ? 'Cerrar Reseñas' : 'Reseñas' }}
+          </button>
+        </div>
+
+        <div class="mt-3" *ngIf="auto.id">
+
+          <div class="card card-body bg-light border-0 rounded-4 shadow-sm animate-fade-in"
+               *ngIf="pestanaActiva[auto.id] === 'tarifas'">
+            <h6 class="fw-bold text-success border-bottom pb-2 mb-3">Lista de Precios</h6>
+            <div class="table-responsive">
+              <table class="table table-sm table-hover mb-0">
+                <thead>
+                  <tr><th>Permiso</th><th>Precio</th></tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let t of auto.tarifas">
+                    <td><span class="badge bg-primary rounded-pill">{{t.tipo_permiso}}</span></td>
+                    <td class="fw-bold">{{t.precio_matricula}}€</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card card-body bg-light border-0 rounded-4 shadow-sm animate-fade-in"
+               *ngIf="pestanaActiva[auto.id] === 'vehiculos'">
+            <h6 class="fw-bold text-primary border-bottom pb-2 mb-3">Nuestra Flota</h6>
+            <div class="table-responsive">
+              <table class="table table-sm table-hover mb-0">
+                <thead>
+                  <tr><th>Modelo</th><th>Matricula</th></tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let v of auto.vehiculos">
+                    <td>{{v.marca_modelo}}</td>
+                    <td><span class="badge bg-secondary">{{v.matricula}}</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card card-body bg-light border-0 rounded-4 shadow-sm animate-fade-in"
+               *ngIf="pestanaActiva[auto.id] === 'resenyas'">
+            <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">Opiniones de alumnos</h6>
+            <div *ngFor="let r of auto.resenyas" class="mb-2 pb-2 border-bottom border-white">
+              <p class="small mb-0"><strong>{{r.usuario_resenyas.nombre}}:</strong> {{r.comentario}}</p>
+            </div>
+          </div>
+
+        </div> </div> </div> </div>
+</section>

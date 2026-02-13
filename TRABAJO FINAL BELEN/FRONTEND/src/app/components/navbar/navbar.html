@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" style="cursor: pointer;" (click)="scrollTo('header')">
+      <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+        <i class="bi bi-compass-fill text-white"></i>
+      </div>
+      <span class="fw-bold text-dark">Lets<span class="text-warning">Drive</span></span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link px-3" style="cursor: pointer;" (click)="irAlBuscador()">BUSCADOR</a></li>
+        <li class="nav-item"><a class="nav-link px-3" style="cursor: pointer;" (click)="scrollTo('autoescuelas')">COMPARA</a></li>
+        <li class="nav-item"><a class="nav-link px-3" style="cursor: pointer;" (click)="scrollTo('contacto')">CONTACTO</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

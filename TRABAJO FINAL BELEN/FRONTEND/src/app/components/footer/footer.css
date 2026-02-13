@@ -1,0 +1,22 @@
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer a:hover {
+    color: #ffc107 !important; /* El amarillo de Bootstrap (warning) */
+    transition: 0.3s;
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bi {
+    vertical-align: middle;
+}
+
+/* Para que las redes sociales tengan un efecto de escala */
+footer .bi:hover {
+    transform: scale(1.2);
+    display: inline-block;
+}
