@@ -3,7 +3,7 @@ footer {
 }
 
 footer a:hover {
-    color: #ffc107 !important; /* El amarillo de Bootstrap (warning) */
+    color: #ffc107 !important;
     transition: 0.3s;
 }
 
@@ -15,7 +15,6 @@ hr {
     vertical-align: middle;
 }
 
-/* Para que las redes sociales tengan un efecto de escala */
 footer .bi:hover {
     transform: scale(1.2);
     display: inline-block;

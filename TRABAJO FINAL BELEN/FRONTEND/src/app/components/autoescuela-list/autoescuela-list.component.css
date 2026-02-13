@@ -1,14 +1,13 @@
 /* Contenedor de la imagen: Altura bloqueada */
 .img-fixed-container {
-    height: 400px; /* Ajusta esta altura a tu gusto visual */
+    height: 400px;
     max-height: 400px;
     min-height: 400px;
     overflow: hidden;
-    /* Evita que flexbox estire el contenedor */
     align-self: flex-start;
 }
 
-/* Ajuste de la imagen interna */
+
 .img-fixed {
     width: 100%;
     height: 100%;
@@ -17,7 +16,7 @@
     transition: transform 0.5s ease;
 }
 
-/* Estilo para los botones */
+
 .btn {
     transition: all 0.2s ease;
 }
@@ -27,16 +26,10 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Animación simple para que el contenido no aparezca de golpe */
+
 .animate-fade-in {
     animation: fadeIn 0.3s ease-in-out;
 }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* Ajustes para móviles */
 @media (max-width: 768px) {
     .img-fixed-container {
